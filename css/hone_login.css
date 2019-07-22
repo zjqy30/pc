@@ -1,0 +1,109 @@
+/*登录*/
+.pc_container{
+	width: 100%;
+	z-index: 1;
+}
+
+.zhezhao{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	left: 0;
+	background: black;
+	opacity: 0.3;
+	z-index: 10;
+	color: red;
+	display: none;
+}
+
+.pc_login_pop{
+	display: none;
+	width: 300px;
+	height: 280px;
+	background:#fff;
+	border-radius: 10px;
+	margin:135px auto;
+	position: relative;
+	z-index: 20;
+}
+
+.pc_minicode_login{
+	display: none;
+	padding: 10px 0;
+	text-align: center;
+	margin:auto auto;
+}
+.pc_minicode_login img{
+	margin:20px auto 10px;
+}
+/*二维码*/
+#qrcode{
+	text-align: center;
+}
+canvas{
+	margin:0 auto;
+}
+
+/*手机号登录样式*/
+.pc_phone_login{
+	text-align: center;
+}
+input.pc_input_code{
+	width: 40%!important;
+	margin:15px 0 0!important;
+	color:#000;
+}
+.pc_phone_login .pc_input{
+	width:80%;
+	height: 40px;
+	background: #f5f5f5;
+	margin:0 auto;
+	background:#858585;
+	color: #fff;
+	font-size: 16px;
+	opacity: 0.39;
+	border-radius: 5px;
+	padding-left:10px;
+	margin:25px 0 0;
+}
+input::-webkit-input-placeholder{
+	color: #fff;
+	font-size: 16px;
+}
+
+.pc_red{
+	color: #F03D37;
+	font-size: 12px;
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-left:10%;
+	margin-top:5px;
+}
+.pc_getcode{
+	height: 40px;
+	border-radius: 5px;
+	color: #fff;
+	outline: none;
+	border:1px solid transparent;
+}
+
+.pc_login{
+	width: 80%;
+	height: 40px;
+	border-radius: 5px;
+	color: #fff;
+	outline: none;
+	background:red;
+	border:1px solid transparent;
+	margin:25px 0 10px;
+}
+.pc_scan{
+	color: #3A9BF5;
+	font-size: 12px;
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-left:10%;
+}

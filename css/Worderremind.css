@@ -1,0 +1,47 @@
+.detail_2{
+    width:515px;
+height:364px;
+background:rgba(255,255,255,1);
+border-radius:2px;
+margin:  180px auto;
+border: 1px solid transparent;
+display: none;
+}
+.detail_2_top{
+    width:513px;
+height:51px;
+background:rgba(246,246,246,1);
+border: 1px solid transparent;
+border-radius:2px;
+}
+.detail_2_top_left{
+    width:144px;
+    height:25px;
+    font-size:18px;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:25px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.detail_2_top img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -22px;
+    right: -481px;
+}
+.detail_2_bottom{
+    width: 190px;
+    height: 100px;
+    margin: 100px auto;
+    text-align: center; 
+}
+.detail_2_bottom p{
+    margin: 10px auto;
+    font-size:18px;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(131,132,134,1);
+}

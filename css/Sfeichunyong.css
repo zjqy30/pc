@@ -1,0 +1,30 @@
+.detail_3{
+    width:764px;
+height:584px;
+background:rgba(255,255,255,1);
+border-radius:2px;
+margin:  180px auto;
+border: 1px solid transparent;
+display: none;
+}
+.detail_3_1{
+    margin-top: 76px;
+    margin-left: 240px;
+}
+.detail_3 p{
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(131,132,134,1);
+    line-height:25px;
+    text-align: center;
+    margin-top: 25px;
+
+}
+.close_1 img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -61px;
+    right: -488px;
+}

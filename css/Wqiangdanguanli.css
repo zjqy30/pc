@@ -1,0 +1,134 @@
+.shouyr_zhuti{
+    width: 1833px;
+    height: 912px;
+}
+.zhuti{
+    height:912px ;
+}
+.Content{
+    height: 914px; 
+}
+.left_bar{
+    height: 978px;
+}
+.bill_manage{
+    width: 1763px;
+    height: 887px;
+    background: rgba(255,255,255,1);
+    margin-top: 23px;
+    margin-left: 36px;
+    border: 1px solid transparent;
+}
+.keyWord{
+    width: 68px;
+    height: 24px;
+    font-size: 17px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+    line-height: 24px;
+    margin-left: 48px;
+    margin-top: 40px;
+}
+.search{
+    width: 230px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(151,151,151,0.4);
+    position: absolute;
+    top: 62px;
+    left: 166px;
+}
+.search_button{
+    width: 70px;
+    height: 30px;
+    background: rgba(24,144,255,1);
+    border-radius: 4px;
+    line-height: 30px;
+    position: absolute;
+    top: 63px;
+    left: 415px;
+}
+.table_style{
+    margin-top: 35px;
+    margin-left: 30px;
+    width: 1703px;
+}
+.table_style tr{
+    height: 58px;
+    border-bottom: 1px solid  rgba(151,151,151,0.1);
+    background: #FAFAFA;
+	font-size:16px;
+	font-family:PingFangSC-Semibold;
+    color:rgba(51,51,51,1);
+}
+
+.table_style th,.table_style td{
+    border-style: none;
+    width: 283px;
+    text-align: center;
+    font-size:16px;
+font-family:PingFangSC-Regular;
+}
+.table_style th{
+    font-family: Microsoft YaHei;
+    font-size:18px;
+    font-weight: 900;
+color:rgba(89,89,89,1);
+}
+.table_style td{
+    background: white;
+    color:rgba(89,89,89,1)
+}
+.paging {
+    width: 15%;
+    height: 40px;
+    margin-top: 25pxpx;
+    margin-left: 1440px;
+}
+/* 小三角从少到多 */
+.sanjiao1,.sanjiao3{
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+}
+
+/* 上面的三角 */
+.white1{
+    border-color:transparent transparent rgba(191, 191, 191, 1) transparent;
+}
+.green1{
+    border-color:transparent transparent rgba(24, 144, 254, 1)  transparent;
+}      
+
+/* 小三角从少到多 */
+.sanjiao2,.sanjiao4{
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    /* border-color: rgba(24, 144, 254, 1) transparent transparent  transparent; */
+    margin-top: 5px;
+}
+/* 下面的三角 */
+.white2{
+    border-color: rgba(191, 191, 191, 1) transparent transparent  transparent;
+}
+.green2{
+    border-color: rgba(24, 144, 254, 1) transparent transparent  transparent;
+}
+.first_couple{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 138px;
+    left: 1100px;
+}
+.second_couple{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 138px;
+    left: 1388px;
+}

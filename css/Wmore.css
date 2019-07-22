@@ -1,0 +1,78 @@
+.heisemo{
+    width: 100%;
+    height: 123.8%;
+    background-color: RGBA(54, 54, 54, 0.5);
+    /* opacity: 0.2; */
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.detail_1{
+    width:763px;
+height:658px;
+background:rgba(255,255,255,1);
+border-radius:2px;
+margin:  180px auto;
+border: 1px solid transparent;
+
+}
+.detail_1_top{
+    width:761px;
+height:51px;
+background:rgba(246,246,246,1);
+border: 1px solid transparent;
+border-radius:2px;
+}
+.detail_1_top_left{
+    width:144px;
+    height:25px;
+    font-size:18px;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:25px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.detail_1_top img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -22px;
+    right: -724px;
+}
+.list1,.list2,.list3,.list4,.list5,.list6,.list7,.list8,.list9,.list10{
+    width: 100%;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.list1 a,.list2 a,.list3 a,.list4 a,.list5 a,.list6 a,.list7 a,.list8 a,.list9 a{
+    font-size:18px;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(189,189,189,1);
+line-height:25px;
+}
+.list1 em,.list2 em,.list4 em,.list5 em,.list6 em,.list7 em,.list8 em,.list9 em{
+    font-size:18px;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+line-height:25px;
+font-style: normal;
+}
+.list3_1{
+    width:82px;
+height:25px;
+background:rgba(250,250,250,1);
+border-radius:2px;
+border:1px solid rgba(217,217,217,1);
+display: inline-block;
+text-align: center;
+line-height: 25px;
+}
+.list10 button{
+    border-radius: 5px;
+    margin-left: 595px;
+}

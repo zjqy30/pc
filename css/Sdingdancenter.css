@@ -1,0 +1,312 @@
+.left_bar{
+    height: 100%;
+}
+.Content{
+    height: 1200px;
+}
+.shouyr_zhuti{
+    width: 1833px;
+    height: 1135px;
+}
+.create_dingdan{
+    width:90px;
+    height:34px;
+    background:rgba(24,144,255,1);
+    border-radius:2px; 
+    position: absolute;
+    left:1450px;
+    top: 17px;
+}
+.create_dingdan_word{
+    float: left;
+    font-size:15px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+   color:rgba(255,255,255,1);
+    line-height:34px;
+    margin-left: 14px;
+}
+.zhuti_1{
+    float: left;
+    width: 1763px;
+    height: 295px;
+    background: rgba(255,255,255,1);
+    margin-top: 23px;
+    margin-left: 36px;
+    border: 1px solid transparent;
+}
+.product_types{
+    float: left;
+    margin: 25px 20px 0px 20px;
+}
+.order_type,.add_time{
+    width: 100%;
+    float: left;
+    margin: 10px 20px;
+}
+
+.product_types1,.order_type1,.add_time1{
+    width: 100px;
+    height: 28px;
+    margin: 0px 20px;
+    font-size: 20px;
+    font-family: PingFangSC-Light;
+    font-weight: 300;
+    color: rgba(166,173,179,1);
+    line-height: 28px;
+    float: left;
+    margin-left: 44px;
+    margin-top: 13px;
+}
+/* 两个字选中 */
+.product_types_selected1,.order_types_selected1,.add_time_selected1{
+    float: left;
+    padding: 0 19px 0 19px;
+    background:rgba(24,144,255,1);
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px; 
+
+}
+/* 两个字没有选中 */
+.product_types_unselect1,.add_time_unselected1{
+    float: left;
+    padding: 0 19px 0 19px;
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(44,62,80,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+/* 商品类型四个字选中 */
+.product_types_select2{
+    float: left;
+    padding: 0 19px 0 19px;
+    background:rgba(24,144,255,1);
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+/* 商品类型四个字没有选中 */
+.product_types_unselect2{
+    float: left;
+    padding: 0 19px 0 19px;
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(44,62,80,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+/* 三个字选中 */
+.order_types_selected2,.add_time_selected2{
+    float: left;
+    width:110px;
+    height:35px;
+    background:rgba(24,144,255,1);
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+/* 三个字没有选中 */
+.order_types_unselected2,.add_time_unselected2{
+    float: left;
+    width:110px;
+    height:35px;
+    border-radius:2px;
+    font-size:18px;
+    font-family:PingFangSC-Light;
+    font-weight:300;
+    color:rgba(44,62,80,1);
+    line-height:35px; 
+    text-align: center;
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+.zhuti2{
+    width: 1763px;
+    height: 1054px;
+}
+.zhuti2_1,.zhuti2_2,.zhuti2_3{
+    width: 100%;
+    height: 212px;
+    float: left;
+    margin-top: 23px;
+    margin-left: 36px;
+    border: 1px solid transparent;
+}
+.zhuti2_1_1,.zhuti2_1_2,.zhuti2_2_1,.zhuti2_2_2,.zhuti2_3_1,.zhuti2_3_2{
+    width: 870px;
+    height: 100%;
+    background: rgba(255,255,255,1);
+    float: left;
+}
+.zhuti2_1_2,.zhuti2_2_2,.zhuti2_3_2{
+    margin-left: 23px;
+}
+.headline{
+    width:312px;
+    height:33px;
+    font-size:24px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:33px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.more{
+    width:64px;
+    height:22px;
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(24,144,255,1);
+    line-height:22px;
+    margin-left: 710px;
+    margin-top: -25px;
+}
+.addTime p{
+    width:100%;
+    height:25px;
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(173,173,173,1);
+    line-height:25px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.addTime em{
+    font-size:18px;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(173,173,173,1);
+line-height:25px;
+font-style: normal;
+}
+.product_type_left,.fans_demand,.daren_platform,.commission_rate{
+    width: 48%;
+    height:25px;
+margin-left: 30px;
+margin-top: 20px;
+
+}
+.product_type_left p,.fans_demand p,.daren_platform p,.commission_rate p{
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(173,173,173,1);
+    line-height:25px;
+}
+.product_type_left em,.fans_demand em,.daren_platform em,.commission_rate em{
+    width:72px;
+    height:25px;
+font-size:18px;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(51,51,51,1);
+line-height:25px;
+font-style: normal;
+}
+.fans_demand,.commission_rate{
+    margin-top: -25px;
+    margin-left: 333px;
+}
+.layui-laypage {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    /* margin: 46px 295px; */
+    font-size: 0;
+    margin-left: 1432px;
+    margin-top: 45px;
+}
+
+.zhuti3{
+    width: 100%;
+}
+/* 分页 */
+.paging{
+    width: 15%;
+    height: 40px;
+    /* margin-right: 50px; */
+    margin-left: 1526px;
+}
+
+/* 没选中的按钮样式 */
+.page_unselect_word{
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(213,213,213,1);
+    line-height:30px;
+    text-align: center;
+}
+.page_unselect{
+    width:30px;
+height:30px;   
+border-radius:4px;
+border:1px solid rgba(151,151,151,0.4);
+float: left;
+position: relative;
+margin: 5px;
+}
+/* 选中的按钮样式 */
+.page_select_word{
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(24,144,255,1);
+    line-height:30px;
+    text-align: center;
+}
+.page_select{
+    width:30px;
+height:30px;   
+border-radius:4px;
+border:1px solid rgba(24,144,255,1);
+float: left;
+position: relative;
+margin: 5px;
+}
+.page img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.chuangjiandingdan_show{
+	margin-top: 30px;
+	position: relative;
+	top: 92px;
+	left: 0px;
+}

@@ -1,0 +1,90 @@
+.left_bar{
+    height: 1091px;
+}
+.shouyr_zhuti{
+    height: 1025px;
+}
+.create_body{
+    width: 1763px;
+    height: 1000px;
+    background: rgba(255,255,255,1);
+    margin-top: 23px;
+    margin-left: 36px;
+    border: 1px solid transparent;
+}
+/* 四个字的input标签提示 */
+.adver,.pro_type,.store_level,.daren_style,.send_sample,.com_rate{
+    width:115px;
+height:26px;
+display: inline-block;
+ margin: 40px 0 25px 500px;
+
+}
+.adver a,.pro_type a,.store_level a,.pro_sale a,.daren_level_demand a,.daren_style a,.send_sample a,.com_rate a,.daren_fans_demand a{
+    font-size:19px;
+font-family:PingFangSC-Light;
+font-weight:300;
+color:rgba(245,108,108,1);
+line-height:20px;
+text-decoration: none;
+}
+.adver em,.pro_type em,.store_level em,.pro_sale em,.daren_level_demand em,.daren_style em,.send_sample em,.com_rate em,.daren_fans_demand em{
+    font-size:19px;
+font-family:PingFangSC-Light;
+font-weight:500;
+color:rgba(51,51,51,1);
+line-height:26px;
+font-style: normal;
+}
+/* input标签的样式 */
+.create_input{
+    width:530px;
+height:50px;
+border-radius:4px;
+opacity:0.4;
+border:1px solid rgba(151,151,151,1);
+}
+input::-webkit-input-placeholder{
+    font-size:16px;
+font-family:PingFangSC-Light;
+font-weight:300;
+color:rgba(51,51,51,1);
+line-height:26px;
+
+}
+
+/* 五个字的input标签提醒 */
+.pro_sale,.daren_level_demand{
+    width: 151px;
+    height: 26px;
+    display: inline-block;
+    margin: 40px 0 25px 465px;
+}
+/* 六个个字的input标签提醒 */
+.daren_fans_demand{
+    width: 208px;
+    height: 26px;
+    display: inline-block;
+    margin: 40px 0 25px 408px;
+
+}
+.last_input{
+    margin-left: 620px;
+    margin-top: 28px;
+}
+.create_body p{
+    position: absolute;
+    top: 72px;
+    right: 671px;
+    font-size:14px;
+font-family:PingFangSC-Light;
+font-weight:300;
+color:rgba(51,51,51,1);
+
+}
+.chuangjiandingdan_show{
+	margin-top: 30px;
+	position: relative;
+	top: 92px;
+	left: 0px;
+}

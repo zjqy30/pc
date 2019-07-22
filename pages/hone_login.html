@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/hone_login.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	
+
+</head>
+<body>
+	<div class="pc_container">
+		<!-- 登录弹出 -->
+		<div class="pc_login_pop">
+			<!-- 手机号码登录 -->
+			<div class="pc_phone_login" id="phoneLogin">
+				<input class="pc_input" type="number" name="phone" placeholder="输入手机号码">
+				<text class="pc_red">手机号码有误，请重新输入。</text>
+				<input class="pc_input pc_input_code" type="number" name="phone" placeholder="输入手机号码">
+				<text></text>
+				<button class="pc_getcode" id="getCode">获取短信验证码</button>
+				<text class="pc_red">验证码有误，请重新输入。</text>
+				<button class="pc_login" id="login">登录</button>
+				<div class="pc_scan" id="scanCode">小程序二维码登录</div>
+			</div>
+			<!-- 小程序二维码登录 -->
+			<div class="pc_minicode_login" id="codeLogin">
+				<div id='qrcode'></div>
+				<text>请使用小程序中我的-扫一扫</text>
+				<!-- <img src="../img/erweima.png" alt="" style="width: 220px; height:220px"> -->
+			</div>
+		</div>
+	</div>
+	<!-- 进入登录遮罩 -->
+	<div class="zhezhao"></div>
+</body>
+</html>
+<!-- 引入二维码生成js -->
+<script type="text/javascript" charset="utf-8" src="js/qrcode.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/hone_login.js"></script>
+
