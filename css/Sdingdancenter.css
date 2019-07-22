@@ -39,12 +39,15 @@
     float: left;
     margin: 25px 20px 0px 20px;
 }
+
 .order_type,.add_time{
     width: 100%;
     float: left;
     margin: 10px 20px;
 }
-
+/* .product_types1{
+    display: inline-block;
+} */
 .product_types1,.order_type1,.add_time1{
     width: 100px;
     height: 28px;
@@ -57,7 +60,9 @@
     float: left;
     margin-left: 44px;
     margin-top: 13px;
+    /* display: inline-block; */
 }
+
 /* 两个字选中 */
 .product_types_selected1,.order_types_selected1,.add_time_selected1{
     float: left;
@@ -88,35 +93,7 @@
     margin: 10px 20px;
     margin-left: 30px;
 }
-/* 商品类型四个字选中 */
-.product_types_select2{
-    float: left;
-    padding: 0 19px 0 19px;
-    background:rgba(24,144,255,1);
-    border-radius:2px;
-    font-size:18px;
-    font-family:PingFangSC-Light;
-    font-weight:300;
-    color:rgba(255,255,255,1);
-    line-height:35px; 
-    text-align: center;
-    margin: 10px 20px;
-    margin-left: 30px;
-}
-/* 商品类型四个字没有选中 */
-.product_types_unselect2{
-    float: left;
-    padding: 0 19px 0 19px;
-    border-radius:2px;
-    font-size:18px;
-    font-family:PingFangSC-Light;
-    font-weight:300;
-    color:rgba(44,62,80,1);
-    line-height:35px; 
-    text-align: center;
-    margin: 10px 20px;
-    margin-left: 30px;
-}
+
 /* 三个字选中 */
 .order_types_selected2,.add_time_selected2{
     float: left;
