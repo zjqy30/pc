@@ -17,9 +17,10 @@ $.ajax({
         var list = data.data.dictList;
         $.each(list, function (index, item) {
             $(".product_types").append(
-                '<div class="shangpin' + (index + 2)+' product_types_unselect1">' + item.dictType + '</div>'
+                '<div class="shangpin' + (index + 2)+' product_types_unselect1">' + item.dictValue + '</div>'
             );
         })
+        
         //点击商品类型显示样式
         $(".shangpin2").click(function () {
             $(".shangpin2").toggleClass("product_types_selected1 product_types_unselect1")

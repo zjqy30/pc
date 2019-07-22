@@ -9,10 +9,10 @@
 
 	<link rel="stylesheet" href="../layui/css/layui.css" />
 	<link rel="stylesheet" href="../css/Sshouye.css" />
-	<link rel="stylesheet" href="../css/Screateorder.css">
+
 	<link rel="stylesheet" href="../css/Sdingdancenter.css">
 	<link rel="stylesheet" href="../css/Sdingdanguanli.css">
-
+	<link rel="stylesheet" href="../css/Screateorder.css">
 
 </head>
 
@@ -60,17 +60,42 @@
 					<div class="pro_sale"><a>* &nbsp;&nbsp;</a><em>产品之前销售&nbsp;&nbsp;</em> </div> <input type="text"
 						placeholder="请输入该产品现销售量数" class="create_input"><br>
 					<div class="daren_level_demand"><a>* &nbsp;&nbsp;</a><em>达人平台要求&nbsp;&nbsp;</em> </div> <input
-						type="text" placeholder="请选择或搜索" class="create_input"><br>
+						type="text" placeholder="请选择或搜索" class="create_input" list="pingtai">
+					<datalist id="pingtai">
+						<option>抖音</option>
+						<option>快手</option>
+					</datalist>
+					<br>
 					<div class="daren_fans_demand"><a>* &nbsp;&nbsp;</a><em>达人粉丝要求（万）&nbsp;&nbsp;</em> </div> <input
 						type="text" placeholder="请选择或搜索" class="create_input"><br>
 					<div class="daren_style"><a>* &nbsp;&nbsp;</a><em>达人类型&nbsp;&nbsp;</em> </div> <input type="text"
-						placeholder="请输入标签" class="create_input"><br>
+						placeholder="请输入标签" class="create_input" list="daren_style">
+						<datalist id="daren_style">
+							<option>类型一</option>
+							<option>类型二</option>
+						</datalist>
+						<br>
 					<div class="send_sample"><a>* &nbsp;&nbsp;</a><em>是否寄样&nbsp;&nbsp;</em> </div> <input type="text"
-						placeholder="请选择是否邮递样品" class="create_input"><br>
+						placeholder="请选择是否邮递样品" class="create_input" list="jiyang">
+						<datalist id="jiyang">
+							<option>是</option>
+							<option>否</option>
+						</datalist>
+						<br>
 					<div class="com_rate"><a>* &nbsp;&nbsp;</a><em>佣金比例&nbsp;&nbsp;</em> </div> <input type="text"
-						placeholder="请选择佣金比例" class="create_input"><br>
-					<input type="text" placeholder="其中平台服务费占取比例" class="create_input last_input"><br>
-					<button class="layui-btn layui-btn-normal last_input">立即创建</button>
+						placeholder="请选择佣金比例" class="create_input" list="yongjin">
+						<datalist id="yongjin">
+							<option>30%</option>
+							<option>30%</option>
+						</datalist>
+						<br>
+					<input type="text" placeholder="其中平台服务费占取比例" class="create_input last_input" list="fuwufei">
+					<datalist id="fuwufei">
+						<option>30%</option>
+						<option>30%</option>
+					</datalist>
+					<br>
+					<button class="layui-btn layui-btn-normal last_input last_input1">立即创建</button>
 				</div>
 				<!-- 创建订单结束 -->
 			</div>
@@ -113,5 +138,6 @@
 <script src="../js/Sdingdancenter.js"></script>
 <script src="../js/Sdingdanguanli.js"></script>
 <script src="../js/Screateorder.js"></script>
+<script src="../js/Sfabuchunyongdingdan.js"></script>
 
 </html>
