@@ -89,6 +89,17 @@
 					<div class="keyWord">关键字：</div>
 					<input type="text" placeholder="请输入" class="search">
 					<button class="layui-btn layui-btn-normal search_button">查询</button>
+					<!-- 小三角开始 -->
+					<div class="first_couple">
+							<div class="sanjiao1 white1"></div>
+							<div class="sanjiao2 green2"></div>
+						</div>
+						<div class="second_couple">
+							<div class="sanjiao3 white1"></div>
+							<div class="sanjiao4 green2"></div>
+						</div>
+	
+						<!-- 小三角结束 -->
 					<!-- 表格开始 -->
 					<table class="layui-table table_style" rules=rows>
 						<colgroup>
@@ -106,103 +117,13 @@
 								<th>标题</th>
 								<th>商品类型</th>
 								<th>平台要求</th>
-								<th>粉丝要求</th>
-								<th>创建时间</th>
+								<th class="reorder1">粉丝要求</th>
+								<th class="reorder2">创建时间</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del del1" style="color:rgba(24,144,255,1);"><a style="list-style-type: none; color: rgba(24,144,255,1);">更多资料|</a> <a style="list-style-type: none; color: rgba(24,144,255,1);">删除</a> </td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del" style="color:rgba(24,144,255,1);">更多资料|删除</td>
-							</tr>
-							<tr>
-								<td>连衣裙找实力强代购...</td>
-								<td>吸尘器</td>
-								<td>暂无</td>
-								<td>220万</td>
-								<td>2018-08-10 &nbsp; &nbsp;09:12:30</td>
-								<td class="more_del"
-									style="color:rgba(24,144,255,1);border-bottom: 1px solid rgba(151,151,151,0.4)">
-									更多资料|删除</td>
-							</tr>
-
+							<!-- 添加内容部分 -->
 						</tbody>
 					</table>
 					<!-- 表格结束 -->
@@ -273,5 +194,6 @@
 <script src="../js/Sshouye.js"></script>
 <script src="../js/Sdingdancenter.js"></script>
 <script src="../js/Sdingdanguanli.js"></script>
+<script src="../js/Sdingdanguanli_del.js"></script>
 
 </html>

@@ -85,4 +85,53 @@ color:rgba(89,89,89,1);
     height: 40px;
     margin-top: 25pxpx;
     margin-left: 1440px;
+    position: absolute;
+    top: 844px;
+}
+
+/* 小三角从少到多 */
+.sanjiao1,.sanjiao3{
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+}
+
+/* 上面的三角 */
+.white1{
+    border-color:transparent transparent rgba(191, 191, 191, 1) transparent;
+}
+.green1{
+    border-color:transparent transparent rgba(24, 144, 254, 1)  transparent;
+}      
+
+/* 小三角从少到多 */
+.sanjiao2,.sanjiao4{
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    /* border-color: rgba(24, 144, 254, 1) transparent transparent  transparent; */
+    margin-top: 5px;
+}
+/* 下面的三角 */
+.white2{
+    border-color: rgba(191, 191, 191, 1) transparent transparent  transparent;
+}
+.green2{
+    border-color: rgba(24, 144, 254, 1) transparent transparent  transparent;
+}
+.first_couple{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 138px;
+    left: 1100px;
+}
+.second_couple{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 138px;
+    left: 1388px;
 }

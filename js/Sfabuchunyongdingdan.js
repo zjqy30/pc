@@ -29,5 +29,6 @@ $(".last_input1").click(function(){
         alert("创建订单成功");
         $("input").val("");
     }
+    
 })
 })

@@ -61,8 +61,7 @@
 /* 两个字选中 */
 .product_types_selected1,.order_types_selected1,.add_time_selected1{
     float: left;
-    width:74px;
-    height:35px;
+    padding: 0 19px 0 19px;
     background:rgba(24,144,255,1);
     border-radius:2px;
     font-size:18px;
@@ -72,45 +71,13 @@
     line-height:35px; 
     text-align: center;
     margin: 10px 20px;
-    margin-left: 30px;
+    margin-left: 30px; 
 
 }
 /* 两个字没有选中 */
 .product_types_unselect1,.add_time_unselected1{
     float: left;
-    width:74px;
-    height:35px;
-    border-radius:2px;
-    font-size:18px;
-    font-family:PingFangSC-Light;
-    font-weight:300;
-    color:rgba(44,62,80,1);
-    line-height:35px; 
-    text-align: center;
-    margin: 10px 20px;
-    margin-left: 30px;
-}
-/* 商品类型四个字选中 */
-.product_types_select2{
-    float: left;
-    width:110px;
-    height:35px;
-    background:rgba(24,144,255,1);
-    border-radius:2px;
-    font-size:18px;
-    font-family:PingFangSC-Light;
-    font-weight:300;
-    color:rgba(255,255,255,1);
-    line-height:35px; 
-    text-align: center;
-    margin: 10px 20px;
-    margin-left: 30px;
-}
-/* 商品类型四个字没有选中 */
-.product_types_unselect2{
-    float: left;
-    width:110px;
-    height:35px;
+    padding: 0 19px 0 19px;
     border-radius:2px;
     font-size:18px;
     font-family:PingFangSC-Light;
@@ -153,25 +120,19 @@
     margin-left: 30px;
 }
 .zhuti2{
-    width: 1763px;
-    height: 1054px;
-}
-.zhuti2_1,.zhuti2_2,.zhuti2_3{
-    width: 100%;
-    height: 212px;
+    width: 1788px;
+    height: 770px;
     float: left;
-    margin-top: 23px;
-    margin-left: 36px;
-    border: 1px solid transparent;
+    margin-left: 13px;
 }
-.zhuti2_1_1,.zhuti2_1_2,.zhuti2_2_1,.zhuti2_2_2,.zhuti2_3_1,.zhuti2_3_2{
+.zhuti2_1_1{
     width: 870px;
-    height: 100%;
+    height: 212px;
     background: rgba(255,255,255,1);
     float: left;
-}
-.zhuti2_1_2,.zhuti2_2_2,.zhuti2_3_2{
     margin-left: 23px;
+    margin-top: 23px;
+
 }
 .headline{
     width:312px;
@@ -260,8 +221,9 @@ font-style: normal;
 .paging{
     width: 15%;
     height: 40px;
-    /* margin-right: 50px; */
     margin-left: 1526px;
+    position: relative;
+    top: -15px;
 }
 
 /* 没选中的按钮样式 */
