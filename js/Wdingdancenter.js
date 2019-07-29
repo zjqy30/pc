@@ -60,29 +60,6 @@ $(document).ready(function () {
         }
     })
 
-    // //点击出现订单详细内容
-    // $(".zhuti2_1_1 .more").click(function () {
-    //     alert("1")
-    //     //用户选择非纯佣弹出二维码
-    //   if( $(".style2").hasClass("order_types_selected2") ){
-    //       $(".heisemo").show();
-    //       $(".detail_1").remove();
-    //       $(".detail_2").remove();
-    //       $(".detail_3").show();
-    //       $(".heisemo").click(function(){
-    //           $(".heisemo").hide();
-    //       })
-    //   }
-    //   else if($(".style1").hasClass("order_types_selected1")){
-    //     alert("3")
-    //       $(".heisemo").show();
-    //       $(".detail_1").show();
-    //       $(".detail_2").remove();
-    //       $(".detail_3").remove();
-    //   }else{
-    //       $(".heisemo").show();
-    //   }
-//   })
 
 
     //点击关闭订单详情
