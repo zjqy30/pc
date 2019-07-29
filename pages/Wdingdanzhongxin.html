@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>订单中心默认</title>
+	<title>网红订单大厅</title>
 
 	<link rel="stylesheet" href="../layui/css/layui.css" />
 	<link rel="stylesheet" href="../css/Wshouye.css" />
@@ -13,65 +13,20 @@
 	<link rel="stylesheet" href="../css/Wmore.css">
 	<link rel="stylesheet" href="../css/Worderremind.css">
 	<link rel="stylesheet" href="../css/Wfeichunyong.css">
+
 </head>
 
 <body>
 	<div class="Content">
+<!-- 点解我想接单后的弹出框开始 -->
 
 		<div class="heisemo">
 			<!-- 更多资料弹出框开始 -->
-			<div class="detail_1">
-				<div class="detail_1_top">
-					<div class="detail_1_top_left">各款连衣裙找销售</div>
-					<img src="../img/close.png" alt="">
-				</div>
-				<div class="list1">
-					<a>商品类型：</a>
-					<em>鞋帽箱包</em>
-				</div>
-				<div class="list2">
-					<a>发布时间：</a>
-					<em>2019-08-12 &nbsp;&nbsp;11:29</em>
-				</div>
-				<div class="list3">
-					<a>达人类型：</a>
-					<div class="list3_1">美食</div>
-					<div class="list3_1">三农</div>
-					<div class="list3_1">美女</div>
-				</div>
-				<div class="list4">
-					<a>粉丝要求：</a>
-					<em>10万</em>
-				</div>
-				<div class="list5">
-					<a>达人平台：</a>
-					<em>暂无要求</em>
-				</div>
-				<div class="list6">
-					<a>店铺等级：</a>
-					<em>一颗皇冠</em>
-				</div>
-				<div class="list7">
-					<a>佣金比例：</a>
-					<em>30%</em>
-				</div>
-				<div class="list8">
-					<a>是否寄样：</a>
-					<em>否</em>
-				</div>
-				<div class="list9">
-					<a>产品以往销量：</a>
-					<em>3271</em>
-				</div>
-				<div class="list10">
-					<button class="layui-btn layui-btn-lg layui-btn-normal take_order">我想接单</button>
-				</div>
-			</div>
-			<!-- 点解我想接单后的弹出框开始 -->
+			
 			<div class="detail_2">
 				<div class="detail_2_top">
 					<div class="detail_2_top_left">接单提醒</div>
-					<img src="../img/close.png" alt="">
+					<img src="../img/close.png" alt="" style="cursor: pointer">
 				</div>
 				<div class="detail_2_bottom">
 					<p>稍后会有平台工作人员</p>
@@ -85,7 +40,7 @@
 			<div class="detail_3">
 				<div class="detail_3_1">
 					<div class="close_1">
-						<img src="../img/close.png" alt="">
+						<img src="../img/close.png" alt="" style="cursor: pointer">
 					</div>
 					
 					<img src="../img/erweima.png" alt="">
@@ -111,8 +66,8 @@
 		<div class="zhuti">
 			<!-- 导航栏开始 -->
 			<div class="shouye_top">
-				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" />
-				<div class="nicheng">ZKB1789012</div>
+				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
+				<div class="nicheng">用户昵称</div>
 				<div class="xiangxiazhankai"></div>
 			</div>
 			<!-- 导航栏结束 -->
@@ -123,24 +78,24 @@
 					<!-- 商品类型开始 -->
 					<div class="product_types">
 						<div class="product_types1">商品类型: </div>
-						<div class="product_types_selected1 shangpin1">全部 </div>
+						<div class="product_types_selected1 shangpin1" style="cursor: pointer">全部 </div>
 					         <!-- 添加商品类型 -->
 					</div>
 					<!-- 商品类型结束 -->
 					<!-- 订单类型开始 -->
 					<div class="order_type" style="display: block">
 						<div class="order_type1">订单类型: </div>
-						<div class="order_types_selected1 style1">纯佣</div>
-						<div class="order_types_unselected2 style2">非纯佣</div>
+						<div class="order_types_selected1 style1" style="cursor: pointer">纯佣</div>
+						<div class="order_types_unselected2 style2" style="cursor: pointer">非纯佣</div>
 					</div>
 					<!-- 订单类型结束 -->
 					<!-- 发布时间开始 -->
 					<div class="add_time">
 						<div class="add_time1">发布时间: </div>
-						<div class="add_time_selected1 time1">不限</div>
-						<div class="add_time_unselected1 time2">今天</div>
-						<div class="add_time_unselected2 time3">一周内</div>
-						<div class="add_time_unselected2 time4">一月内</div>
+						<div class="add_time_selected1 time1" style="cursor: pointer">不限</div>
+						<div class="add_time_unselected1 time2" style="cursor: pointer">今天</div>
+						<div class="add_time_unselected2 time3" style="cursor: pointer">一周内</div>
+						<div class="add_time_unselected2 time4" style="cursor: pointer">一月内</div>
 					</div>
 					<!-- 发布时间结束 -->
 				</div>
@@ -154,7 +109,7 @@
 					<!-- <div id="demo4"></div> -->
 					<div class="paging">
 						<div class="page page_unselect"><img src="../img/last.png" alt=""></div>
-						<div class="page_unselect">
+						<!-- <div class="page_unselect">
 							<p class="page_unselect_word">1</p>
 						</div>
 						<div class="page_select">
@@ -165,8 +120,8 @@
 						</div>
 						<div class="page_unselect">
 							<p class="page_unselect_word">4</p>
-						</div>
-						<div class="page page_unselect"><img src="../img/next.png" alt=""></div>
+						</div> -->
+						<!-- <div class="page page_unselect"><img src="../img/next.png" alt=""></div> -->
 					</div>
 					<!-- 分页结束 -->
 				</div>
@@ -204,11 +159,14 @@
 <script src="../layui/layui.js"></script>
 <script src="../js/Wshouye.js"></script>
 <script src="../js/Wdingdancenter.js"></script>
-<script src="../js/Walert.js"></script>
+<!-- <script src="../js/Walert.js"></script> -->
 <script src="../js/Worderremind.js"></script>
 <!-- 商品类型js -->
-<script src="../js/Sorder_style.js"></script>   
+<script src="../js/Worder_style.js"></script>   
 <!-- 订单列表js -->
-<script src="../js/Sdingdanguanliliebiao.js"></script>
+<!-- <script src="../js/Wdingdanguanlilibiao.js"></script> -->
+<script src="../js/common.js"></script>
+<script src="../js/Wqingdan.js"></script>
+<script src="../js/login_out.js"></script>
 
 </html>

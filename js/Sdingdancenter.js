@@ -1,7 +1,18 @@
-
-
 //点击按钮的样式
 $(document).ready(function () {
+
+//如果登陆显示微信头像和昵称
+var headPic = window.localStorage.getItem("headPic");
+var wxName = window.localStorage.getItem("wxName");
+var userType = window.localStorage.getItem("userType");
+
+if (headPic && wxName) {
+    if (userType == '2') {
+        $(".shouyetouxiang").attr("src", headPic);
+        $(".nicheng").html(wxName);
+    }
+}
+
     //商品类型的按钮样式改变
     $(".shangpin1").click(function () {
         $(".shangpin1").toggleClass("product_types_selected1 product_types_unselect1");
@@ -51,7 +62,6 @@ $(document).ready(function () {
             $(".time4").removeClass("add_time_selected2").addClass("add_time_unselected2");
         }
     })
-
     $(".time4").click(function () {
         $(".time4").toggleClass("add_time_selected2 add_time_unselected2");
         if ($(".time4").hasClass("add_time_selected2")) {
@@ -60,37 +70,13 @@ $(document).ready(function () {
             $(".time3").removeClass("add_time_selected2").addClass("add_time_unselected2");
         }
     })
-
-    //点击出现订单详细内容
-    // $(".zhuti2_1_1 .more").click(function () {
-        //用户选择非纯佣弹出二维码
-
-    //     if ($(".style2").hasClass("order_types_selected2")) {
-    //         $(".heisemo").show();
-    //         $(".detail_1").hide();
-    //         $(".detail_2").hide();
-    //         $(".detail_3").show();
-    //         $(".heisemo").click(function () {
-    //             $(".heisemo").hide();
-    //         })
-    //     } else if ($(".style1").hasClass("order_types_selected1")) {
-    //         $(".heisemo").show();
-    //         $(".detail_1").show();
-    //         $(".detail_2").hide();
-    //         $(".detail_3").hide();
-    //     } else {
-    //         $(".heisemo").show();
-    //     }
-    // })
-
-    //点击关闭订单详情
-    // $(".detail_1_top img").click(function () {
-        // $(".heisemo").hide();
-    // })
-
     //跳转到创建订单页面
     $(".create_dingdan").click(function () {
         window.location.href = "Schuangjiandingdan.html";
     })
 
+     //点击关闭订单详情
+     $(".detail_1_top img").click(function () {
+        $(".heisemo").hide();
+    })
 })

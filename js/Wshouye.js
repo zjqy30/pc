@@ -28,14 +28,30 @@ $(document).ready(function () {
 
 
     //实现左边侧边栏的页面跳转
-    $(".shouye").click(function(){
-        window.location.href="Wshouye.html";
+    $(".shouye").click(function () {
+        window.localStorage.setItem("ifJumpIndex","1");
+        window.location.href = "wshouye.html";
+        
     })
-    $(".dingdan").click(function(){
-        window.location.href="Wdingdanzhongxin.html";
+    $(".dingdan").click(function () {
+        window.location.href = "wdingdanzhongxin.html";
     })
 
-    $(".dingdanguanli").click(function(){
-        window.location.href="Wqiangdanguanli.html";
+    $(".dingdanguanli").click(function () {
+        window.location.href = "wqiangdanguanli.html";
     })
 })
+//如果登陆显示微信头像和昵称
+var headPic = window.localStorage.getItem("headPic");
+var wxName = window.localStorage.getItem("wxName");
+var userType = window.localStorage.getItem("userType");
+if (headPic && wxName) {
+    if (userType == '1') {
+        $(".shouyetouxiang").attr("src", headPic);
+        $(".nicheng").html(wxName);
+    }
+}
+
+
+
+

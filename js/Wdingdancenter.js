@@ -1,19 +1,4 @@
-//分页
-// layui.use(['laypage', 'layer'], function(){
-//     var laypage = layui.laypage
-//     ,layer = layui.layer;
 
-//     //执行一个laypage实例
-//     laypage.render({
-//         elem: 'demo4'
-//         ,count: 100
-//         ,first: false
-//         ,last: false
-//         ,groups:4
-//         ,prev:'<img src="../img/last.png" alt=""></img>'
-//         ,next:'<img src="../img/next.png" alt=""></img>'
-//       });
-//   });
 
 //点击按钮的样式
 $(document).ready(function () {
@@ -75,48 +60,42 @@ $(document).ready(function () {
         }
     })
 
-    //点击出现订单详细内容
-    $(".zhuti2_1_1 .more").click(function () {
-        //用户选择非纯佣弹出二维码
-
-      if( $(".style2").hasClass("order_types_selected2") ){
-          $(".heisemo").show();
-          $(".detail_1").hide();
-          $(".detail_2").hide();
-          $(".detail_3").show();
-          $(".heisemo").click(function(){
-              $(".heisemo").hide();
-          })
-      }else if($(".style1").hasClass("order_types_selected1")){
-          $(".heisemo").show();
-          $(".detail_1").show();
-          $(".detail_2").hide();
-          $(".detail_3").hide();
-      }else{
-          $(".heisemo").show();
-      }
-  })
+    // //点击出现订单详细内容
+    // $(".zhuti2_1_1 .more").click(function () {
+    //     alert("1")
+    //     //用户选择非纯佣弹出二维码
+    //   if( $(".style2").hasClass("order_types_selected2") ){
+    //       $(".heisemo").show();
+    //       $(".detail_1").remove();
+    //       $(".detail_2").remove();
+    //       $(".detail_3").show();
+    //       $(".heisemo").click(function(){
+    //           $(".heisemo").hide();
+    //       })
+    //   }
+    //   else if($(".style1").hasClass("order_types_selected1")){
+    //     alert("3")
+    //       $(".heisemo").show();
+    //       $(".detail_1").show();
+    //       $(".detail_2").remove();
+    //       $(".detail_3").remove();
+    //   }else{
+    //       $(".heisemo").show();
+    //   }
+//   })
 
 
     //点击关闭订单详情
     $(".detail_1_top img").click(function () {
-        $(".heisemo").hide();
-    })
-
-    //点击我想接单
-    $(".take_order").click(function () {
-        $(".detail_1").hide();
-        $(".detail_2").show();
-        $(".zhuti2_1_1 .more").css("color", "grey");
-    })
-
-    //点击关闭我想接单
-    $(".detail_1_top img").click(function () {
+        $(".detail_1").remove();
         $(".heisemo").hide();
     })
 
     //点击关闭接单详情
     $(".detail_2_top img").click(function () {
+        $(".detail_2").hide();
+        $(".detail_1").remove();
+        // window.location.reload();
         $(".heisemo").hide();
     })
 

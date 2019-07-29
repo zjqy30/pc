@@ -35,16 +35,27 @@ $(document).ready(function () {
 
     //点击跳转页面
     $(".shouye").click(function(){
-        window.location.href="Sshouye.html";
+        window.location.href="sshouye.html";
     })
     $(".dingdan").click(function(){
-        window.location.href="Sdingdanzhongxin.html";
+        window.location.href="sdingdanzhongxin.html";
     })
 
     $(".dingdanguanli").click(function(){
-        window.location.href="Sdingdanguanli.html";
+        window.location.href="sdingdanguanli.html";
     })
     $(".sendbill").click(function(){
-        window.location.href="Schuangjiandingdan.html";
+        window.location.href="schuangjiandingdan.html";
     })
 })
+//如果登陆显示微信头像和昵称
+var headPic = window.localStorage.getItem("headPic");
+var wxName = window.localStorage.getItem("wxName");
+var userType = window.localStorage.getItem("userType");
+
+if (headPic && wxName) {
+    if (userType == '2') {
+        $(".shouyetouxiang").attr("src", headPic);
+        $(".nicheng").html(wxName);
+    }
+}

@@ -1,5 +1,4 @@
-
-//商户纯佣订单管理
+//网红订单管理
 
 var globel = 'http://192.168.0.166:8080';
 var token = window.localStorage.getItem('token');
@@ -83,7 +82,7 @@ function getList(pageNumber) {
         "dateOrderBy": dateOrderBy
     };
     $.ajax({
-        url: globel + '/hone/web/pureOffer/selfList',
+        url: globel + '/hone/web/pureOffer/snatchList',
         dataType: 'json',
         type: "post",
         contentType: "application/json",
@@ -92,7 +91,7 @@ function getList(pageNumber) {
             console.log(data);
             var errorCode = data.errorCode;
             if (errorCode == 0) {
-                console.log('商家纯佣订单列表', data.data.pageData.list);
+                console.log('网红订单列表', data.data.pageData.list);
                 //总信息条数
                 var totalCount = data.data.pageData.totalCount;
                 console.log(totalCount);
@@ -107,7 +106,7 @@ function getList(pageNumber) {
                 $(".paging").html("");
 
                 if (pageNumber != 1) {
-                    $(".paging").append('<div class="page page_select" onclick=pageLimit(' + (Number(pageNumber) - 1) +  ') ><img src="../img/last.png" alt=""></div>');
+                    $(".paging").append('<div class="page page_select" onclick=pageLimit(' + (Number(pageNumber) - 1) + ',' + keyword + ',' + dateOrderBy + ',' + fansNumsOrderBy + ') ><img src="../img/last.png" alt=""></div>');
                 } else {
                     $(".paging").append('<div class="page page_unselect" ><img src="../img/last.png" alt=""></div>');
                 }
@@ -226,12 +225,14 @@ function getList(pageNumber) {
                     // alert(id+"哈哈");
 
                     $(".more1" + index).click(function () {
+                     
                         var del_data = {
                             'token': token,
-                            'id': list[index].id
+                            'loginUserId': loginUserId,
+                            'offerId': list[index].id
                         }
                         $.ajax({
-                            url: globel + "/hone/web/pureOffer/del",
+                            url: globel + "/hone/web/pureOffer/delSnatch",
                             dataType: 'json',
                             type: "post",
                             contentType: "application/json",
@@ -267,15 +268,14 @@ function getList(pageNumber) {
 }
 
 function pageLimit(pageNumber) {
-    
     getList(pageNumber);
 
 }
 
-function inputPageNumberPageLimit(pageNumber,keyword, dateOrderBy, fansNumsOrderBy) {
+function inputPageNumberPageLimit(keyword, dateOrderBy, fansNumsOrderBy) {
     var pageNumber = document.getElementById("inputNumber").value;
     globelPageNumber = pageNumber;
-    getList(pageNumber);
+    getList(kpageNumber);
 }
 
 //判断模糊查询，当点击按钮时，给函数传关键字
@@ -286,7 +286,5 @@ $(".search_button").click(function () {
     getList(pageNumber);
 
 })
-
-
 
 

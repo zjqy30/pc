@@ -5,63 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>订单管理</title>
+	<title>商家订单管理</title>
 	<link rel="stylesheet" href="../layui/css/layui.css" />
 	<link rel="stylesheet" href="../css/Sshouye.css" />
 	<link rel="stylesheet" href="../css/Sdingdancenter.css">
-	<link rel="stylesheet" href="../css/Sdingdanguanli.css">
 	<link rel="stylesheet" href="../css/Smore.css">
+	<link rel="stylesheet" href="../css/Sdingdanguanli.css">
 </head>
 
 <body>
 	<div class="Content">
 			<div class="heisemo">
-					<!-- 更多资料弹出框开始 -->
-					<div class="detail_1">
-						<div class="detail_1_top">
-							<div class="detail_1_top_left">各款连衣裙找销售</div>
-							<img src="../img/close.png" alt="">
-						</div>
-						<div class="list1">
-							<a>商品类型：</a>
-							<em>鞋帽箱包</em>
-						</div>
-						<div class="list2">
-							<a>发布时间：</a>
-							<em>2019-08-12 &nbsp;&nbsp;11:29</em>
-						</div>
-						<div class="list3">
-							<a>达人类型：</a>
-							<div class="list3_1">美食</div>
-							<div class="list3_1">三农</div>
-							<div class="list3_1">美女</div>
-						</div>
-						<div class="list4">
-							<a>粉丝要求：</a>
-							<em>10万</em>
-						</div>
-						<div class="list5">
-							<a>达人平台：</a>
-							<em>暂无要求</em>
-						</div>
-						<div class="list6">
-							<a>店铺等级：</a>
-							<em>一颗皇冠</em>
-						</div>
-						<div class="list7">
-							<a>佣金比例：</a>
-							<em>30%</em>
-						</div>
-						<div class="list8">
-							<a>是否寄样：</a>
-							<em>否</em>
-						</div>
-						<div class="list9">
-							<a>产品以往销量：</a>
-							<em>3271</em>
-						</div>
-		
-					</div>
 		
 				</div>
 		<!--侧边栏开始-->
@@ -78,8 +32,8 @@
 		<div class="zhuti">
 			<!-- 导航栏开始 -->
 			<div class="shouye_top">
-				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" />
-				<div class="nicheng">ZKB1789012</div>
+				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;"/>
+				<div class="nicheng">用户昵称</div>
 				<div class="xiangxiazhankai"></div>
 			</div>
 			<!-- 导航栏结束 -->
@@ -87,7 +41,7 @@
 			<div class="shouyr_zhuti">
 				<div class="bill_manage">
 					<div class="keyWord">关键字：</div>
-					<input type="text" placeholder="请输入" class="search">
+					<input type="text" placeholder="请输入" class="search" value="">
 					<button class="layui-btn layui-btn-normal search_button">查询</button>
 					<!-- 小三角开始 -->
 					<div class="first_couple">
@@ -101,7 +55,7 @@
 	
 						<!-- 小三角结束 -->
 					<!-- 表格开始 -->
-					<table class="layui-table table_style" rules=rows>
+					<table class="layui-table table_style" >
 						<colgroup>
 							<col width="150">
 							<col width="200">
@@ -129,9 +83,9 @@
 					<!-- 表格结束 -->
 					<!-- 分页开始 -->
 					<div class="zhuti3">
-						<!-- <div id="demo4"></div> -->
+						<div id="demo4"></div>
 						<div class="paging">
-							<div class="page page_unselect"><img src="../img/last.png" alt=""></div>
+							<!-- <div class="page page_unselect"><img src="../img/last.png" alt=""></div>
 							<div class="page_unselect">
 								<p class="page_unselect_word">1</p>
 							</div>
@@ -144,7 +98,7 @@
 							<div class="page_unselect">
 								<p class="page_unselect_word">4</p>
 							</div>
-							<div class="page page_unselect"><img src="../img/next.png" alt=""></div>
+							<div class="page page_unselect"><img src="../img/next.png" alt=""></div> -->
 						</div>
 					</div>
 					<!-- 分页结束 -->
@@ -187,13 +141,15 @@
 		</div>
 		<!-- 创建订单按钮 -->
 	</div>
+
 </body>
 <script src="../bootstrap/js/jquery.min.js"></script>
 <script src="../jquery.min.js"></script>
 <script src="../layui/layui.js"></script>
 <script src="../js/Sshouye.js"></script>
 <script src="../js/Sdingdancenter.js"></script>
-<script src="../js/Sdingdanguanli.js"></script>
 <script src="../js/Sdingdanguanli_del.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/login_out.js"></script>
 
 </html>

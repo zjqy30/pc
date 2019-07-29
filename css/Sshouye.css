@@ -22,21 +22,25 @@
 	position: absolute;
 	left: 24px;
 	top: 104px;
+	cursor: pointer;
 }
 .dingdan{
 	position: absolute;
 	left: 24px;
 	top: 154px;
+	cursor: pointer;
 }
 .sendbill{
 	position: absolute;
 	left: 24px;
 	top: 200px;
+	cursor: pointer;
 }
 .dingdanguanli{
 	position: absolute;
 	left: 24px;
 	top: 250px;
+	cursor: pointer;
 }
 
 .zhuti{
@@ -90,6 +94,7 @@
 .shouyetouxiang{
 	margin-left: 1595px;
 	margin-top: 18px;
+	border-radius: 15px;
 }
 .xiangxiazhankai{
 	width: 0px;
@@ -156,6 +161,7 @@
 	top: 73px;
 	left: 1706px;
 	display: none;
+	cursor: pointer;
 }
 
 .pic_login_out{

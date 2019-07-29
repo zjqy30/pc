@@ -111,7 +111,6 @@ color:rgba(89,89,89,1);
     height: 0;
     border-width: 6px;
     border-style: solid;
-    /* border-color: rgba(24, 144, 254, 1) transparent transparent  transparent; */
     margin-top: 5px;
 }
 /* 下面的三角 */
@@ -134,4 +133,7 @@ color:rgba(89,89,89,1);
     position: absolute;
     top: 138px;
     left: 1388px;
+}
+.heisemo{
+    height: 978px;
 }
