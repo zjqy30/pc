@@ -1,0 +1,1 @@
+var globel='https://hongonew.com'

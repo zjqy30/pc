@@ -1,19 +1,7 @@
+
+
 //点击按钮的样式
 $(document).ready(function () {
-
-//如果登陆显示微信头像和昵称
-var headPic = window.localStorage.getItem("headPic");
-var wxName = window.localStorage.getItem("wxName");
-var userType = window.localStorage.getItem("userType");
-
-if (headPic && wxName) {
-    if (userType == '2') {
-        $(".shouyetouxiang").attr("src", headPic);
-        $(".nicheng").html(wxName);
-    }
-}
-
-    //商品类型的按钮样式改变
     $(".shangpin1").click(function () {
         $(".shangpin1").toggleClass("product_types_selected1 product_types_unselect1");
         if ($(".shangpin1").hasClass("product_types_selected1")) {
@@ -62,6 +50,7 @@ if (headPic && wxName) {
             $(".time4").removeClass("add_time_selected2").addClass("add_time_unselected2");
         }
     })
+
     $(".time4").click(function () {
         $(".time4").toggleClass("add_time_selected2 add_time_unselected2");
         if ($(".time4").hasClass("add_time_selected2")) {
@@ -70,13 +59,33 @@ if (headPic && wxName) {
             $(".time3").removeClass("add_time_selected2").addClass("add_time_unselected2");
         }
     })
-    //跳转到创建订单页面
-    $(".create_dingdan").click(function () {
-        window.location.href = "Schuangjiandingdan.html";
-    })
 
-     //点击关闭订单详情
-     $(".detail_1_top img").click(function () {
-        $(".heisemo").hide();
-    })
+    var userType = window.localStorage.getItem("userType");
+    if (userType == '1') {
+        //点击关闭订单详情
+        $(".detail_1_top img").click(function () {
+            $(".detail_1").remove();
+            $(".heisemo").hide();
+        })
+
+        //点击关闭接单详情
+        $(".detail_2_top img").click(function () {
+            $(".detail_2").hide();
+            $(".detail_1").remove();
+            // window.location.reload();
+            $(".heisemo").hide();
+        })
+    }
+    if (userType == '2') {
+        //跳转到创建订单页面
+        $(".create_dingdan").click(function () {
+            window.location.href = "Schuangjiandingdan.html";
+        })
+
+        //点击关闭订单详情
+        $(".detail_1_top img").click(function () {
+            $(".heisemo").hide();
+        })
+    }
+
 })

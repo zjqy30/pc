@@ -5,7 +5,7 @@ $(document).ready(function () {
         window.location.href = "Schuangjiandingdan.html";
     })
 })
-var globel = 'http://192.168.0.166:8080';
+// var globel = 'http://192.168.0.166:8080';
 var token = localStorage.getItem('token');
 
 //如果登陆显示微信头像和昵称

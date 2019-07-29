@@ -1,7 +1,7 @@
 
-//商户纯佣订单管理
+//订单管理
 
-var globel = 'http://192.168.0.166:8080';
+// var globel = 'http://192.168.0.166:8080';
 var token = window.localStorage.getItem('token');
 var keyword = '';
 var fansNumsOrderBy = '';
@@ -14,19 +14,19 @@ var userType = window.localStorage.getItem("userType");
 var id = '';
 
 //如果登陆显示微信头像和昵称
-if (headPic && wxName) {
-    if (userType == '1') {
-        $(".shouyetouxiang").attr("src", headPic);
-        $(".nicheng").html(wxName);
-    }
-}
+// if (headPic && wxName) {
+//     if (userType == '1') {
+$(".shouyetouxiang").attr("src", headPic);
+$(".nicheng").html(wxName);
+//     }
+// }
 
 // 传关键字的函数
 getList();
 
 // 粉丝排序
 $(".reorder1").click(function () {
-    var pageNumber= '1';
+    var pageNumber = '1';
     // 日期初始化
     dateOrderBy = "";
     $(".second_couple .sanjiao3").removeClass("green1").addClass("white1");
@@ -46,7 +46,7 @@ $(".reorder1").click(function () {
 
 // 日期排序
 $(".reorder2").click(function () {
-    var pageNumber= '1';
+    var pageNumber = '1';
     // 粉丝的初始化
     fansNumsOrderBy = "";
     $(".first_couple .sanjiao1").removeClass("green1").addClass("white1");
@@ -82,8 +82,14 @@ function getList(pageNumber) {
         "fansNumsOrderBy": fansNumsOrderBy,
         "dateOrderBy": dateOrderBy
     };
+    var url = '';
+    if (userType == '2') {
+        url = globel + '/hone/web/pureOffer/selfList'
+    } else if (userType == '1') {
+        url = globel + '/hone/web/pureOffer/snatchList'
+    }
     $.ajax({
-        url: globel + '/hone/web/pureOffer/selfList',
+        url: url,
         dataType: 'json',
         type: "post",
         contentType: "application/json",
@@ -107,7 +113,7 @@ function getList(pageNumber) {
                 $(".paging").html("");
 
                 if (pageNumber != 1) {
-                    $(".paging").append('<div class="page page_select" onclick=pageLimit(' + (Number(pageNumber) - 1) +  ') ><img src="../img/last.png" alt=""></div>');
+                    $(".paging").append('<div class="page page_select" onclick=pageLimit(' + (Number(pageNumber) - 1) + ') ><img src="../img/last.png" alt=""></div>');
                 } else {
                     $(".paging").append('<div class="page page_unselect" ><img src="../img/last.png" alt=""></div>');
                 }
@@ -134,7 +140,7 @@ function getList(pageNumber) {
 
                 $(".paging").append('<div class="page page_unselect" style="border: 1px solid transparent" ><input type="text" id="inputNumber" value=' + globelPageNumber + ' style="width:60%;height:90%"  ></input>');
                 $(".paging").append('<div class="page page_select page_select_word" onclick=inputPageNumberPageLimit(' + keyword + ',' + dateOrderBy + ',' + fansNumsOrderBy + ')>跳转</div>')
-                console.log("总页数=" + totalPage);
+                // console.log("总页数=" + totalPage);
 
                 var list = data.data.pageData.list;
                 //先把tbody清空
@@ -221,17 +227,26 @@ function getList(pageNumber) {
                         })
                     })
 
-
                     //点击删除纯佣订单
-                    // alert(id+"哈哈");
 
                     $(".more1" + index).click(function () {
-                        var del_data = {
-                            'token': token,
-                            'id': list[index].id
+                        if (userType == '1') {
+                            var del_data = {
+                                'token': token,
+                                'loginUserId': loginUserId,
+                                'offerId': list[index].id
+                            }
+                            url=globel + "/hone/web/pureOffer/delSnatch";
+                        } else if (userType == '2') {
+                            var del_data = {
+                                'token': token,
+                                'id': list[index].id
+                            }
+                            url=globel + "/hone/web/pureOffer/del";
                         }
+
                         $.ajax({
-                            url: globel + "/hone/web/pureOffer/del",
+                            url: url,
                             dataType: 'json',
                             type: "post",
                             contentType: "application/json",
@@ -267,12 +282,12 @@ function getList(pageNumber) {
 }
 
 function pageLimit(pageNumber) {
-    
+
     getList(pageNumber);
 
 }
 
-function inputPageNumberPageLimit(pageNumber,keyword, dateOrderBy, fansNumsOrderBy) {
+function inputPageNumberPageLimit(pageNumber, keyword, dateOrderBy, fansNumsOrderBy) {
     var pageNumber = document.getElementById("inputNumber").value;
     globelPageNumber = pageNumber;
     getList(pageNumber);

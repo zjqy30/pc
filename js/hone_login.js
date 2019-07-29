@@ -1,5 +1,5 @@
 window.onload = function () {
-    var globel = 'http://192.168.0.166:8080';
+    // var globel = 'http://192.168.0.166:8080';
     // 根据手机号以及验证码校验做显隐
     $('.pc_red').hide();
 
@@ -35,7 +35,11 @@ window.onload = function () {
 
         } else if (userInfoObj.userType == '2') {
             // 商家
-            window.location.href = 'pages/sdingdanzhongxin.html';
+            if(window.localStorage.getItem('ifJumpIndex') == null){
+                window.location.href = 'pages/sdingdanzhongxin.html';
+            }else{
+                window.localStorage.removeItem('ifJumpIndex');
+            } 
         }
     }
 
