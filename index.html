@@ -23,7 +23,7 @@
 				<div class="pc_phone_login" id="phoneLogin">
 					<input class="pc_input" type="number" name="phone" placeholder="输入手机号码">
 					<text class="pc_red">手机号码有误，请重新输入。</text>
-					<input class="pc_input pc_input_code" type="number" name="phone"   placeholder="输入验证码">
+					<input class="pc_input pc_input_code" type="number" name="phone" placeholder="输入验证码">
 					<text></text>
 					<button class="pc_getcode" id="getCode">获取短信验证码</button>
 					<text class="pc_red">验证码有误，请重新输入。</text>
@@ -53,10 +53,16 @@
 		<div class="zhuti">
 			<!-- 导航栏 -->
 			<div class="shouye_top">
-				<img src="img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;"/>
-				<div class="nicheng">用户昵称</div>
+				<!-- 退出登录开始-->
+				<div class="login_out">
+					<img src="../img/loginout.png" class="pic_login_out">
+					<p id="login_out">退出账号</p>
+					<div id="sanjiao"></div>
+				</div>
+				<!-- 退出登录结束 -->
 				<div class="xiangxiazhankai"></div>
-
+				<div class="nicheng">用户昵称</div>
+				<img src="img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
 			</div>
 			<!-- 主体 -->
 			<div class="shouyr_zhuti">
@@ -89,7 +95,8 @@
 		<!-- 退出登录结束 -->
 	</div>
 </body>
-<script src="bootstrap/js/jquery.min.js"></script>
+
+<!-- <script src="bootstrap/js/jquery.min.js"></script> -->
 <script src="js/globel.js"></script>
 <script src="jquery.min.js"></script>
 <script src="js/WSshouye.js"></script>
@@ -98,4 +105,19 @@
 <script src="js/qrcode.js"></script>
 <script src="js/login_out.js"></script>
 <script src="js/jQuery.md5(1).js"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- <script>
+		$().ready(function () {
+			var headPic = window.localStorage.getItem("headPic");
+			var wxName = window.localStorage.getItem("wxName");
+			if (window.localStorage.getItem('userData') != null) {
+				$(".shouyetouxiang").attr("src", headPic);
+				$(".nicheng").html(wxName);
+			} else {
+				$(".shouyetouxiang").attr("src", "../img/shouyetouxiang.png");
+				$(".nicheng").html("用户昵称");
+			}
+		})
+	
+	</script> -->
 </html>

@@ -18,11 +18,11 @@
 
 <body>
 	<div class="Content">
-<!-- 点解我想接单后的弹出框开始 -->
+		<!-- 点解我想接单后的弹出框开始 -->
 
 		<div class="heisemo">
 			<!-- 更多资料弹出框开始 -->
-			
+
 			<div class="detail_2">
 				<div class="detail_2_top">
 					<div class="detail_2_top_left">接单提醒</div>
@@ -42,7 +42,7 @@
 					<div class="close_1">
 						<img src="../img/close.png" alt="" style="cursor: pointer">
 					</div>
-					
+
 					<img src="../img/erweima.png" alt="">
 				</div>
 				<p>目前网页端暂不支持非纯佣单操作</p>
@@ -64,13 +64,19 @@
 
 		<!-- 右侧主体开始 -->
 		<div class="zhuti">
-			<!-- 导航栏开始 -->
+			<!-- 导航栏 -->
 			<div class="shouye_top">
-				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
-				<div class="nicheng">用户昵称</div>
+				<!-- 退出登录开始-->
+				<div class="login_out">
+					<img src="../img/loginout.png" class="pic_login_out">
+					<p id="login_out">退出账号</p>
+					<div id="sanjiao"></div>
+				</div>
+				<!-- 退出登录结束 -->
 				<div class="xiangxiazhankai"></div>
+				<div class="nicheng">用户昵称</div>
+				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
 			</div>
-			<!-- 导航栏结束 -->
 			<!-- 主体 -->
 			<div class="shouyr_zhuti">
 				<!-- 主体上面的订单类型开始 -->
@@ -79,7 +85,7 @@
 					<div class="product_types">
 						<div class="product_types1">商品类型: </div>
 						<div class="product_types_selected1 shangpin1" style="cursor: pointer">全部 </div>
-					         <!-- 添加商品类型 -->
+						<!-- 添加商品类型 -->
 					</div>
 					<!-- 商品类型结束 -->
 					<!-- 订单类型开始 -->
@@ -101,27 +107,14 @@
 				</div>
 				<!-- 主体上面的订单类型结束 -->
 				<div class="zhuti2">
-					       
-					   <!-- 添加内容 -->
+
+					<!-- 添加内容 -->
 				</div>
 				<div class="zhuti3">
 					<!-- 分页开始 -->
-					<!-- <div id="demo4"></div> -->
 					<div class="paging">
 						<div class="page page_unselect"><img src="../img/last.png" alt=""></div>
-						<!-- <div class="page_unselect">
-							<p class="page_unselect_word">1</p>
-						</div>
-						<div class="page_select">
-							<p class="page_select_word">2</p>
-						</div>
-						<div class="page_unselect">
-							<p class="page_unselect_word">3</p>
-						</div>
-						<div class="page_unselect">
-							<p class="page_unselect_word">4</p>
-						</div> -->
-						<!-- <div class="page page_unselect"><img src="../img/next.png" alt=""></div> -->
+
 					</div>
 					<!-- 分页结束 -->
 				</div>
@@ -144,13 +137,6 @@
 		</div>
 		<!-- 悬浮框结束 -->
 
-		<!-- 退出登录开始-->
-		<div class="login_out">
-			<img src="../img/loginout.png" class="pic_login_out">
-			<p id="login_out">退出账号</p>
-			<div id="sanjiao"></div>
-		</div>
-		<!-- 退出登录结束 -->
 
 	</div>
 </body>
@@ -161,7 +147,8 @@
 <script src="../js/WSshouye.js"></script>
 <script src="../js/WSdingdancenter.js"></script>
 <script src="../js/Worderremind.js"></script>
-<script src="../js/WSorder_style.js"></script>   
+<script src="../js/WSorder_style.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/login_out.js"></script>
+
 </html>

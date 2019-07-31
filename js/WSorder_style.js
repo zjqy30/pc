@@ -1,3 +1,31 @@
+//纯佣样式改变
+$(".style1").click(function () {
+    $(".style1").toggleClass("order_types_selected1 product_types_unselect1")
+    if ($(".style1").hasClass("order_types_selected1")) {
+        $(".style2").removeClass("order_types_selected2").addClass("order_types_unselected2")
+        dataType_fun();
+        
+    }
+})
+//非纯佣样式改变
+$(".style2").click(function () {
+    $(".style2").toggleClass("order_types_selected2 order_types_unselected2")
+    if ($(".style2").hasClass("order_types_selected2")) {
+        $(".style1").removeClass("order_types_selected1").addClass("product_types_unselect1")
+        $(".zhuti2").html('');
+        $(".heisemo").show();
+        $(".detail_1").remove();
+        $(".detail_2").hide();
+        $(".detail_3").show();
+    }
+})
+
+$(".close_1 img").click(function(){
+    $(".heisemo").hide();
+    $(".detail_3").hide();
+})
+
+
 // var globel = 'http://192.168.0.166:8080';
 var token = localStorage.getItem('token');
 
@@ -9,8 +37,11 @@ var headPic = window.localStorage.getItem("headPic");
 var wxName = window.localStorage.getItem("wxName");
 var userType = window.localStorage.getItem("userType");
 
-$(".shouyetouxiang").attr("src", headPic);
-$(".nicheng").html(wxName);
+
+if (window.localStorage.getItem('userData') != null) {
+    $(".shouyetouxiang").attr("src", headPic);
+    $(".nicheng").html(wxName);
+}
 
 show_pro_style();
 dataType_fun(dataType1, productId);
@@ -87,10 +118,6 @@ function dataType_fun(dataType1, productId, pageNumber) {
         'dateType': dataType1
     };
     console.log("请求参数" + JSON.stringify(hall_list));
-
-
-
-
     $.ajax({
         url: globel + '/hone/web/pureOffer/list',
         dataType: 'json',
@@ -419,7 +446,7 @@ if (userType == '1') {
                 console.log(data);
                 var errorCode = data.errorCode;
                 if (errorCode == 0) {
-                    alert("您已接单，等待商家认证");
+                    // alert("您已接单，请等待平台联系");
                     $(".detail_2").show();
                 } else if (errorCode == 1) {
                     alert("请求出错！");

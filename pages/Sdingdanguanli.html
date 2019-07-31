@@ -8,16 +8,16 @@
 	<title>商家订单管理</title>
 	<link rel="stylesheet" href="../layui/css/layui.css" />
 	<link rel="stylesheet" href="../css/Sshouye.css" />
-	<link rel="stylesheet" href="../css/Sdingdancenter.css">
+	<!-- <link rel="stylesheet" href="../css/Sdingdancenter.css"> -->
 	<link rel="stylesheet" href="../css/Smore.css">
 	<link rel="stylesheet" href="../css/Sdingdanguanli.css">
 </head>
 
 <body>
 	<div class="Content">
-			<div class="heisemo">
-		
-				</div>
+		<div class="heisemo">
+
+		</div>
 		<!--侧边栏开始-->
 		<div class="left_bar">
 			<img src="../img/left_logo.png" class="left_logo" />
@@ -32,9 +32,19 @@
 		<div class="zhuti">
 			<!-- 导航栏开始 -->
 			<div class="shouye_top">
-				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;"/>
-				<div class="nicheng">用户昵称</div>
+				<div class="login_out">
+					<img src="../img/loginout.png" class="pic_login_out">
+					<p id="login_out">退出账号</p>
+					<div id="sanjiao"></div>
+				</div>
+				<!-- 退出登录结束 -->
 				<div class="xiangxiazhankai"></div>
+				<div class="nicheng">用户昵称</div>
+				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
+				<!-- 创建订单按钮 -->
+				<div class="create_dingdan">
+					<p class="create_dingdan_word">创建订单</p>
+				</div>
 			</div>
 			<!-- 导航栏结束 -->
 			<!-- 主体 -->
@@ -45,17 +55,17 @@
 					<button class="layui-btn layui-btn-normal search_button">查询</button>
 					<!-- 小三角开始 -->
 					<div class="first_couple">
-							<div class="sanjiao1 white1"></div>
-							<div class="sanjiao2 green2"></div>
-						</div>
-						<div class="second_couple">
-							<div class="sanjiao3 white1"></div>
-							<div class="sanjiao4 green2"></div>
-						</div>
-	
-						<!-- 小三角结束 -->
+						<div class="sanjiao1 white1"></div>
+						<div class="sanjiao2 white2"></div>
+					</div>
+					<div class="second_couple">
+						<div class="sanjiao3 white1"></div>
+						<div class="sanjiao4 white2"></div>
+					</div>
+
+					<!-- 小三角结束 -->
 					<!-- 表格开始 -->
-					<table class="layui-table table_style" >
+					<table class="layui-table table_style">
 						<colgroup>
 							<col width="150">
 							<col width="200">
@@ -81,32 +91,16 @@
 						</tbody>
 					</table>
 					<!-- 表格结束 -->
-					<!-- 分页开始 -->
-					<div class="zhuti3">
-						<div id="demo4"></div>
-						<div class="paging">
-							<!-- <div class="page page_unselect"><img src="../img/last.png" alt=""></div>
-							<div class="page_unselect">
-								<p class="page_unselect_word">1</p>
-							</div>
-							<div class="page_select">
-								<p class="page_select_word">2</p>
-							</div>
-							<div class="page_unselect">
-								<p class="page_unselect_word">3</p>
-							</div>
-							<div class="page_unselect">
-								<p class="page_unselect_word">4</p>
-							</div>
-							<div class="page page_unselect"><img src="../img/next.png" alt=""></div> -->
-						</div>
-					</div>
-					<!-- 分页结束 -->
+
 				</div>
+				<!-- 分页开始 -->
+				<div class="zhuti3">
+					<div class="paging">
 
-
+					</div>
+				</div>
+				<!-- 分页结束 -->
 			</div>
-
 		</div>
 		<!-- 右边主体结束 -->
 
@@ -128,18 +122,6 @@
 		</div>
 		<!-- 悬浮框结束 -->
 
-		<!-- 退出登录开始-->
-		<div class="login_out">
-			<img src="../img/loginout.png" class="pic_login_out">
-			<p id="login_out">退出账号</p>
-			<div id="sanjiao"></div>
-		</div>
-		<!-- 退出登录结束 -->
-		<!-- 创建订单按钮 -->
-		<div class="create_dingdan">
-			<p class="create_dingdan_word">创建订单</p>
-		</div>
-		<!-- 创建订单按钮 -->
 	</div>
 
 </body>

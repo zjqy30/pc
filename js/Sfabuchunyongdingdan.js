@@ -5,7 +5,6 @@ $(document).ready(function () {
         window.location.href = "Schuangjiandingdan.html";
     })
 })
-// var globel = 'http://192.168.0.166:8080';
 var token = localStorage.getItem('token');
 
 //如果登陆显示微信头像和昵称
@@ -14,11 +13,9 @@ var wxName = window.localStorage.getItem("wxName");
 var userType = window.localStorage.getItem("userType");
 var loginUserId = window.localStorage.getItem("userId");
 
-if (headPic && wxName) {
-    if (userType == '2') {
-        $(".shouyetouxiang").attr("src", headPic);
-        $(".nicheng").html(wxName);
-    }
+if (window.localStorage.getItem('userData') != null) {
+    $(".shouyetouxiang").attr("src", headPic);
+    $(".nicheng").html(wxName);
 }
 
 //点击创建订单按钮
@@ -54,7 +51,6 @@ $(".last_input1").click(function () {
             "profitRatio": $(".com_rate").next().val(),
             "loginUserId": loginUserId
         }
-        // $(".last_input1").click(function () {
         $.ajax({
             url: globel + '/hone/web/pureOffer/create',
             dataType: 'json',
@@ -75,7 +71,6 @@ $(".last_input1").click(function () {
                 }
             }
         })
-        // })
     }
 
 

@@ -3,15 +3,14 @@
 	margin: 0;
 }
 .Content{
-	height: 969px;
 	width: 100%;
-	/* background-color: green; */
 }
 .left_bar{
 	background-color: #021528;
 	width: 64px;
-	height: 100%;
+	height: 969px;
 	float: left;
+	overflow: hidden;
 }
 .left_logo{
 	position: absolute;
@@ -44,19 +43,17 @@
 }
 
 .zhuti{
-	width: 1837px;
-	height: 100%;	
+	width:calc(100% - 64px);
 	float: left;
-	/* background-color: blue */
+	overflow: hidden;
 }
 .shouye_top{
-	width: 1837px;
+	width: 100%;
 	height: 64px;
 	float: left;
-
 }
 .shouyr_zhuti{
-	width:1837px;
+	width:100%;
     height:903px;
 	background:rgba(240,242,245,1);
 	border: 1px solid white;
@@ -88,11 +85,11 @@
 	margin: 0 auto;
 }
 .shouyetouxiang,.nicheng,.xiangxiazhankai{
-	float: left;
+	float: right;
 	margin: 10px;
 }
 .shouyetouxiang{
-	margin-left: 1595px;
+	margin-right: 25px;
 	margin-top: 18px;
 	border-radius: 15px;
 }
@@ -103,9 +100,14 @@
 	border-style: solid;
 	border-color: #333333 transparent transparent transparent;
 	margin-top: 30px;
+	margin-right: 55px;
 }
 .nicheng{
 	margin-top: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100px;
 }
 .shouye_xuanfu{
 	position: absolute;
@@ -151,45 +153,43 @@
 	left: 0px;
 }
 .login_out{
-	width:107px;
-    height:36px;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 2px 2px 0px rgba(0,0,0,0.15);
-    border-radius:4px;
-	float: left;
-	position: absolute;
-	top: 73px;
-	left: 1706px;
-	display: none;
-	cursor: pointer;
+	width: 107px;
+    height: 36px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    float: right;
+    position: absolute;
+    top: 81px;
+    right: 57px;
+    display: none;
+    cursor: pointer;
+    z-index: 20;
 }
 
 .pic_login_out{
 	display: inline;
-	float: left;
 	margin-top: 12px;
     margin-left: 12px;
 }
 #login_out{
-	width:104px;
-    height:36px;
-    font-size:13px;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color:rgba(121,123,131,1);
-	line-height:18px;
-	line-height: 36px;
-	margin-left: 10px;
-	text-align: center;
+	font-size: 13px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(121,123,131,1);
+    line-height: 18px;
+    line-height: 36px;
+    margin-left: 15px;
+    text-align: center;
+	margin-top: -25px;
 }
 #sanjiao{
 	width: 0px;
-	height: 0px;
+    height: 0px;
     border-width: 8px;
     border-style: solid;
-	border-color: transparent transparent  #FFFFFF transparent;
-	margin-top: 30px;
-	position: relative;
-	top: -82px;
-    left: 78px;
+    border-color: transparent transparent #FFFFFF transparent;
+    margin-top: 30px;
+    margin-left: 83px;
+    margin-top: -53px;
 }

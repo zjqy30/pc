@@ -5,30 +5,11 @@
     height: 1200px;
 }
 .shouyr_zhuti{
-    width: 1833px;
     height: 1135px;
 }
-.create_dingdan{
-    width:90px;
-    height:34px;
-    background:rgba(24,144,255,1);
-    border-radius:2px; 
-    position: absolute;
-    left:1450px;
-    top: 17px;
-}
-.create_dingdan_word{
-    float: left;
-    font-size:15px;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-   color:rgba(255,255,255,1);
-    line-height:34px;
-    margin-left: 14px;
-}
+
 .zhuti_1{
-    float: left;
-    width: 1763px;
+    width: calc(100% - 72px);
     height: 295px;
     background: rgba(255,255,255,1);
     margin-top: 23px;
@@ -120,19 +101,18 @@
     margin-left: 30px;
 }
 .zhuti2{
-    width: 1788px;
-    height: 770px;
+    width: 100%;
+    height: 760px;
     float: left;
     margin-left: 13px;
 }
 .zhuti2_1_1{
-    width: 870px;
+    width: calc((100% - 95px)/2);
     height: 212px;
     background: rgba(255,255,255,1);
     float: left;
     margin-left: 23px;
     margin-top: 23px;
-
 }
 .headline{
     width:312px;
@@ -146,14 +126,14 @@
     margin-top: 20px;
 }
 .more{
-    width:64px;
-    height:22px;
-    font-size:16px;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color:rgba(24,144,255,1);
-    line-height:22px;
-    margin-left: 710px;
+    width: 64px;
+    height: 22px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(24,144,255,1);
+    line-height: 22px;
+    margin-left: calc(80%);
     margin-top: -25px;
 }
 .addTime p{
@@ -215,17 +195,15 @@ font-style: normal;
 }
 
 .zhuti3{
-    width: 100%;
+    width: 15%;
 }
-
 
 /* 分页 */
 .paging{
-    width: 15%;
+    width: 122%;
     height: 40px;
-    margin-left: 1526px;
-    position: relative;
-    top: -15px;
+    margin-top: 760px;
+    margin-left: 524%;
 }
 
 /* 没选中的按钮样式 */
@@ -271,4 +249,22 @@ margin: 5px;
     bottom: 0;
     right: 0;
     margin: auto;
+}
+.create_dingdan{
+    width: 90px;
+    height: 34px;
+    background: rgba(24,144,255,1);
+    border-radius: 2px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 180px;
+}
+.create_dingdan_word{
+    float: left;
+    font-size:15px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+   color:rgba(255,255,255,1);
+    line-height:34px;
+    margin-left: 14px;
 }

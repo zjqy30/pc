@@ -9,20 +9,6 @@ $(document).ready(function () {
         }
     })
 
-    //纯佣样式改变
-    $(".style1").click(function () {
-        $(".style1").toggleClass("order_types_selected1 product_types_unselect1")
-        if ($(".style1").hasClass("order_types_selected1")) {
-            $(".style2").removeClass("order_types_selected2").addClass("order_types_unselected2")
-        }
-    })
-    //非纯佣样式改变
-    $(".style2").click(function () {
-        $(".style2").toggleClass("order_types_selected2 order_types_unselected2")
-        if ($(".style2").hasClass("order_types_selected2")) {
-            $(".style1").removeClass("order_types_selected1").addClass("product_types_unselect1")
-        }
-    })
     //发布时间的两个字的样式改变
     $(".time1").click(function () {
         $(".time1").toggleClass("add_time_selected1 add_time_unselected1");
@@ -79,7 +65,7 @@ $(document).ready(function () {
     if (userType == '2') {
         //跳转到创建订单页面
         $(".create_dingdan").click(function () {
-            window.location.href = "Schuangjiandingdan.html";
+            window.location.href = "schuangjiandingdan.html";
         })
 
         //点击关闭订单详情

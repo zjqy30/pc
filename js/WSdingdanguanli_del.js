@@ -13,13 +13,10 @@ var userType = window.localStorage.getItem("userType");
 
 var id = '';
 
-//如果登陆显示微信头像和昵称
-// if (headPic && wxName) {
-//     if (userType == '1') {
-$(".shouyetouxiang").attr("src", headPic);
-$(".nicheng").html(wxName);
-//     }
-// }
+if (window.localStorage.getItem('userData') != null) {
+    $(".shouyetouxiang").attr("src", headPic);
+    $(".nicheng").html(wxName);
+}
 
 // 传关键字的函数
 getList();

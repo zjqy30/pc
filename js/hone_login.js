@@ -3,9 +3,14 @@ window.onload = function () {
     // 根据手机号以及验证码校验做显隐
     $('.pc_red').hide();
 
-    // 
+    console.log(returnCitySN);
     var websocket = null;
-    var addr = 'ws://192.168.0.166:8080/hone/web/websocket/';
+    //测试
+    // var addr = 'ws://192.168.0.166:8080/hone/web/websocket/';
+
+     // 正式
+            var addr = 'wss://hongonew.com/hone/web/websocket/';
+
     // 本地
     var addr_phone = globel+'/hone/web/userBasic/loginByPhone';
     var addr_code = globel+'/hone/pc/website/message/sendSms';
@@ -150,7 +155,7 @@ $('#login').click(function () {
         $('.pc_minicode_login').show();
         // 时间戳time
         var timeStamp = getTimeStamp();
-        console.log(timeStamp);
+        // console.log(timeStamp);
 
         // 建立连接
         setSocket(timeStamp);
@@ -177,7 +182,8 @@ $('#login').click(function () {
 
         //判断当前浏览器是否支持WebSocket
         if ('WebSocket' in window) {
-            websocket = new WebSocket(addr + time + "/123456");
+
+            websocket = new WebSocket(addr + time + "/"+returnCitySN.cip);
         }
         else {
             alert("对不起！你的浏览器不支持webSocket")

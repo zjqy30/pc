@@ -1,4 +1,3 @@
-// var globel = 'http://192.168.0.166:8080';
 var token = localStorage.getItem('token');
 
 var pro_style_data = {
@@ -13,8 +12,7 @@ $.ajax({
     data: JSON.stringify(pro_style_data),
     success: function (data) {
         var errorCode = data.errorCode;
-        if (errorCode == 0) {
-            // console.log('商品类型列表', data.data.dictList);
+        if (errorCode == 0) {;
             var list = data.data.dictList;
             $.each(list, function (index, item) {
                 var id = item.id

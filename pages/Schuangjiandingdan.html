@@ -9,9 +9,6 @@
 
 	<link rel="stylesheet" href="../layui/css/layui.css" />
 	<link rel="stylesheet" href="../css/Sshouye.css" />
-
-	<link rel="stylesheet" href="../css/Sdingdancenter.css">
-	<link rel="stylesheet" href="../css/Sdingdanguanli.css">
 	<link rel="stylesheet" href="../css/Screateorder.css">
 
 </head>
@@ -32,32 +29,33 @@
 		<div class="zhuti">
 			<!-- 导航栏开始-->
 			<div class="shouye_top">
-				<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;"/>
-				<div class="nicheng">用户昵称</div>
-				<div class="xiangxiazhankai"></div>
+					<div class="login_out">
+							<img src="../img/loginout.png" class="pic_login_out">
+							<p id="login_out">退出账号</p>
+							<div id="sanjiao"></div>
+						</div>
+						<!-- 退出登录结束 -->
+						<div class="xiangxiazhankai"></div>
+						<div class="nicheng">用户昵称</div>
+						<img src="../img/shouyetouxiang.png" class="shouyetouxiang" style="width: 30px; height:30px;" />
+						
 			</div>
 			<!-- 导航栏结束 -->
 			<!-- 主体 -->
 			<div class="shouyr_zhuti">
 				<!-- 创建订单开始 -->
-				<!-- 向下展开图标开始 -->
-				<!-- <div class="down">
-					<img src="../img/down.png" alt="">
-					<img src="../img/down.png" alt="">
-					<img src="../img/down.png" alt="">
-					<img src="../img/down.png" alt="">
-					<img src="../img/down.png" alt="">
-				</div> -->
-				<!-- 向下展开图标结束 -->
+				
+
 				<div class="create_body">
 					<div class="adver"><a>* &nbsp;&nbsp;</a><em>广告标题&nbsp;&nbsp;</em> </div> <input type="text"
 						placeholder="请输入标题" class="create_input" maxlength="20">
-					<p>0/20</p><br>
+					<br>
 
 					<div class="pro_type"><a>* &nbsp;&nbsp;</a><em>商品类型&nbsp;&nbsp;</em> </div>
 					<select name="modules" lay-verify="required" lay-search="" class="create_input pro_type_list">
 						<option value="">请输入内幕</option>
 					</select>
+					<br>
 
 
 					<div class="store_level"><a>* &nbsp;&nbsp;</a><em>店铺等级&nbsp;&nbsp;</em> </div> <input type="text"
@@ -70,6 +68,7 @@
 					<select name="modules" lay-verify="required" lay-search="" class="create_input daren_level_demand_list">
 						<option value="">请选择或搜索</option>
 					</select>
+					<br>
 
 					<div class="daren_fans_demand"><a>* &nbsp;&nbsp;</a><em>达人粉丝要求（万）&nbsp;&nbsp;</em> </div> <input
 						type="text" placeholder="请选择或搜索" class="create_input" οninput="value=value.replace(/[^\d]/g,'')"><br>
@@ -78,6 +77,7 @@
 					<select name="modules" lay-verify="required" lay-search="" class="create_input daren_style_list">
 						<option value="">请输入标签</option>
 					</select>
+					<br>
 					
 					<div class="send_sample"><a>* &nbsp;&nbsp;</a><em>是否寄样&nbsp;&nbsp;</em> </div> 
 					<select name="modules" lay-verify="required" lay-search="" class="create_input send_sample_list">
@@ -85,13 +85,12 @@
 						<option value="1">是</option>
 						<option value="0">否</option>
 					</select>
+					<br>
 					
 					<div class="com_rate"><a>* &nbsp;&nbsp;</a><em>佣金比例&nbsp;&nbsp;</em> </div>
 					<input type="text" placeholder="请输入佣金比例 0~100" class="create_input"><br>
 
 					<h5>提示：其中平台佣金占取比例5%</h5>
-
-					<!-- <input type="text" value="其中平台佣金占取比例-5%" class="create_input last_input"  readonly="readonly"><br> -->
 
 					<button class="layui-btn layui-btn-normal last_input last_input1">立即创建</button>
 				</div>
@@ -122,11 +121,6 @@
 			<div id="sanjiao"></div>
 		</div>
 		<!-- 退出登录结束 -->
-		<!-- 创建订单按钮开始 -->
-		<div class="create_dingdan">
-			<p class="create_dingdan_word">创建订单</p>
-		</div>
-		<!-- 创建订单按钮结束 -->
 	</div>
 </body>
 <script src="../bootstrap/js/jquery.min.js"></script>
