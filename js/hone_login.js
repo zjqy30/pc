@@ -8,12 +8,12 @@ window.onload = function () {
     //测试
     // var addr = 'ws://192.168.0.166:8080/hone/web/websocket/';
 
-     // 正式
-            var addr = 'wss://hongonew.com/hone/web/websocket/';
+    // 正式
+    var addr = 'wss://hongonew.com/hone/web/websocket/';
 
     // 本地
-    var addr_phone = globel+'/hone/web/userBasic/loginByPhone';
-    var addr_code = globel+'/hone/pc/website/message/sendSms';
+    var addr_phone = globel + '/hone/web/userBasic/loginByPhone';
+    var addr_code = globel + '/hone/pc/website/message/sendSms';
     var userInfo = '';
 
     // 如果window.localStorage中的userData有数据且token未过期，处登录状态
@@ -34,134 +34,153 @@ window.onload = function () {
             if (window.localStorage.getItem('ifJumpIndex') == null) {
                 // 网红
                 window.location.href = 'pages/wdingdanzhongxin.html';
-            }else{
+            } else {
                 window.localStorage.removeItem('ifJumpIndex');
             }
 
         } else if (userInfoObj.userType == '2') {
             // 商家
-            if(window.localStorage.getItem('ifJumpIndex') == null){
+            if (window.localStorage.getItem('ifJumpIndex') == null) {
                 window.location.href = 'pages/sdingdanzhongxin.html';
-            }else{
+            } else {
                 window.localStorage.removeItem('ifJumpIndex');
-            } 
+            }
         }
     }
 
 
-    var phone_num=null;
+    var phone_num = null;
 
-$('#getCode').click(function () {
-        
+
+
+
+    $('#getCode').click(function () {
+        //手机验证码倒计时
+        $("#getCode").attr('disabled', true);
+        var time_countdown = 180;
+        time_countdown--;
+        var countFun = setInterval(function () {
+
+            console.log(time_countdown);
+            $("#getCode").text('(' + --time_countdown + ')s后重新发送');
+        }, 1000)
+        setTimeout(function () {
+            clearInterval(countFun);
+            $("#getCode").text('获取短信验证码').attr('disabled', false);
+        }, 180000)
+
+
+
         //获取手机验证码
-    phone_num=$(".pc_input").val();
-         // 获取当前年月日
-    var curDate = new Date();
-    var curYear = curDate.getFullYear();
-    var curMonth = curDate.getMonth() + 1;
-    var curDay = curDate.getDate();
+        phone_num = $(".pc_input").val();
+        // 获取当前年月日
+        var curDate = new Date();
+        var curYear = curDate.getFullYear();
+        var curMonth = curDate.getMonth() + 1;
+        var curDay = curDate.getDate();
 
-    if (curMonth >= 1 && curMonth <= 9) {
-        curMonth = "0" + curMonth;
-    }
-    if (curDay >= 0 && curDay <= 9) {
-        curDay = "0" + curDay;
-    }
-
-
-    var str = curYear + "-" + curMonth + "-" + curDay + ':' + phone_num + ':' + 'hongone888';
-    var md5phone = $.md5(str);
-    
-    var veri_code={
-        'phoneNo':phone_num,
-        'smsSign':md5phone,
-        'type':"3"
-    };
-
-
-    $.ajax({
-        url: addr_code,
-        dataType: 'json',
-        type: "post",
-        contentType: "application/json",
-        data: JSON.stringify(veri_code),
-        success: function (data) {
-            if (data.errorCode == 0) {
-                alert("发送成功！")
-            } else if (data.errorCode == 1) {
-                alert("发送失败！")
-            }
-            //window.location.reload()//实时刷新
+        if (curMonth >= 1 && curMonth <= 9) {
+            curMonth = "0" + curMonth;
         }
-    })
+        if (curDay >= 0 && curDay <= 9) {
+            curDay = "0" + curDay;
+        }
 
-})
 
-// 手机验证码登录
-$('#login').click(function () {
+        var str = curYear + "-" + curMonth + "-" + curDay + ':' + phone_num + ':' + 'hongone888';
+        var md5phone = $.md5(str);
 
-    var code=$(".pc_input_code").val();
+        var veri_code = {
+            'phoneNo': phone_num,
+            'smsSign': md5phone,
+            'type': "3"
+        };
 
-    var veri_code={
-        'phoneNo':phone_num,
-        'code':code
-    };
-
-   
-    $.ajax({
-        url: addr_phone,
-        dataType: 'json',
-        type: "post",
-        contentType: "application/json",
-        data: JSON.stringify(veri_code),
-        success: function (data) {
-            if (data.errorCode == 0) {
-                alert("发送成功！");
-                var list=data.data;
-                window.localStorage.setItem('userData', list);
-                window.localStorage.setItem('token', list.token);
-                window.localStorage.setItem('userId', list.userId);
-                window.localStorage.setItem('userType', list.userType);
-                window.localStorage.setItem('headPic', list.headPic);
-                window.localStorage.setItem('wxName', list.wxName);
-                if (list.userType == '0') {
-                    // 普通
-                    alert('请前往小程序进行身份认证！')
-                } else if (list.userType == '1') {
-                    // 网红
-                    window.location.href = 'pages/wdingdanzhongxin.html';
-
-                } else if (list.userType == '2') {
-                    // 商家
-                    window.location.href = 'pages/sdingdanzhongxin.html';
+        $.ajax({
+            url: addr_code,
+            dataType: 'json',
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify(veri_code),
+            success: function (data) {
+                if (data.errorCode == 0) {
+                    alert("发送成功！")
+                } else if (data.errorCode == 1) {
+                    alert("发送失败！")
                 }
-             
-            } else if (data.errorCode == 1) {
-                alert("发送失败！")
+                //window.location.reload()//实时刷新
             }
-            //window.location.reload()//实时刷新
-        }
+        })
+
     })
-})
+
+    // 手机验证码登录
+
+    // $('#phoneLogin').html('');
+    $('#use_veriCode').click(function () {
+        //点击使用手机验证码登录做显隐
+        $('.pc_minicode_login').hide();
+        $('.pc_phone_login').show();
+
+        $('#login').click(function () {
+
+            var code = $(".pc_input_code").val();
+
+            var veri_code = {
+                'phoneNo': phone_num,
+                'code': code
+            };
 
 
+            $.ajax({
+                url: addr_phone,
+                dataType: 'json',
+                type: "post",
+                contentType: "application/json",
+                data: JSON.stringify(veri_code),
+                success: function (data) {
+                    if (data.errorCode == 0) {
+                        alert("发送成功！");
+                        var list = data.data;
+                        window.localStorage.setItem('userData', list);
+                        window.localStorage.setItem('token', list.token);
+                        window.localStorage.setItem('userId', list.userId);
+                        window.localStorage.setItem('userType', list.userType);
+                        window.localStorage.setItem('headPic', list.headPic);
+                        window.localStorage.setItem('wxName', list.wxName);
+                        if (list.userType == '0') {
+                            // 普通
+                            alert('请前往小程序进行身份认证！')
+                        } else if (list.userType == '1') {
+                            // 网红
+                            window.location.href = 'pages/wdingdanzhongxin.html';
 
+                        } else if (list.userType == '2') {
+                            // 商家
+                            window.location.href = 'pages/sdingdanzhongxin.html';
+                        }
 
-    // 初始化二维码
-    $('#qrcode').html('');
-    $('#scanCode').click(function () {
-        // 点击二维码登录时，手机登录域被隐藏
-        $('.pc_phone_login').hide();
-        $('.pc_minicode_login').show();
-        // 时间戳time
-        var timeStamp = getTimeStamp();
-        // console.log(timeStamp);
+                        // $('.pc_login_pop').hide();
+                        // $('.zhezhao').hide();
 
-        // 建立连接
-        setSocket(timeStamp);
-        // 根据时间戳实时获取二维码
-        getCode(timeStamp);
+                    } else if (data.errorCode == 1) {
+                        alert("发送失败！")
+                    }
+                    //window.location.reload()//实时刷新
+                }
+            })
+        })
     })
+
+    // 时间戳time
+    var timeStamp = getTimeStamp();
+    // console.log(timeStamp);
+
+    // 建立连接
+    setSocket(timeStamp);
+    // 根据时间戳实时获取二维码
+    getCode(timeStamp);
+    // })
 
     // 获取时间戳
     function getTimeStamp() {
@@ -182,8 +201,12 @@ $('#login').click(function () {
 
         //判断当前浏览器是否支持WebSocket
         if ('WebSocket' in window) {
-
-            websocket = new WebSocket(addr + time + "/"+returnCitySN.cip);
+            if (!returnCitySN.cip) {
+                returnCitySN.cip = '0.0.0.0';
+                websocket = new WebSocket(addr + time + "/" + returnCitySN.cip);
+            } else {
+                websocket = new WebSocket(addr + time + "/" + returnCitySN.cip);
+            }
         }
         else {
             alert("对不起！你的浏览器不支持webSocket")
@@ -235,8 +258,8 @@ $('#login').click(function () {
                 }
 
                 // 关闭pop
-                $('.pc_login_pop').hide();
-                $('.zhezhao').hide();
+                // $('.pc_login_pop').hide();
+                // $('.zhezhao').hide();
                 // 断开连接
                 closeWebSocket();
 
@@ -271,4 +294,9 @@ $('#login').click(function () {
         websocket.close();
         console.error('断开连接');
     }
+
+    //关闭登录页面
+    $('.loginOutBt').click(function () {
+        window.location.href = "https://www.hongonew.com";
+    })
 }

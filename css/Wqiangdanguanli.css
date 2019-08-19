@@ -1,3 +1,6 @@
+* { margin: 0; 
+	padding: 0; 
+}
 .Content{
     height: 914px; 
 }
@@ -169,13 +172,13 @@ margin: 5px;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 138px;
-    left: 1100px;
+    top: 15%;
+    left: 60%;
 }
 .second_couple{
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 138px;
-    left: 1388px;
+    top: 15%;
+    left: 75.5%;
 }

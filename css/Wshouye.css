@@ -14,8 +14,10 @@
 }
 .left_logo{
 	position: absolute;
-	left: 16px;
-	top: 24px;
+    left: 12px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
 }
 .shouye{
 	position: absolute;

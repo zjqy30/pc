@@ -1,3 +1,6 @@
+* { margin: 0; 
+	padding: 0; 
+}
 .left_bar{
     height: 1091px;
 }
@@ -43,26 +46,29 @@ height:50px;
 border-radius:4px;
 opacity:0.4;
 border:1px solid rgba(151,151,151,1);
+font-size:16px;
+font-family:PingFangSC-Light;
+color:rgba(51,51,51,1);
 }
 input::-webkit-input-placeholder{
     font-size:16px;
 font-family:PingFangSC-Light;
 font-weight:300;
 color:rgba(51,51,51,1);
+/* color:red; */
 line-height:26px;
-
 }
 
 /* 五个字的input标签提醒 */
 .pro_sale,.daren_level_demand{
-    width: 151px;
+    width: 153px;
     height: 26px;
     display: inline-block;
     margin: 40px 0 25px 26%;
 }
 /* 六个个字的input标签提醒 */
 .daren_fans_demand{
-    width: 208px;
+    width: 210px;
     height: 26px;
     display: inline-block;
     margin: 40px 0 25px 23%;
@@ -94,10 +100,10 @@ h5{
     margin-left: 34%;
 }
 select{
-    font-size: 16px;
-    font-family: PingFangSC-Light;
-    font-weight: 500;
-    color:rgba(51,51,51,1);
+    font-size: 16px !important; 
+    font-family: PingFangSC-Light !important;
+    font-weight: 300 !important;
+    color:rgba(51,51,51,1) !important;
 }
 .create_dingdan{
     width: 90px;

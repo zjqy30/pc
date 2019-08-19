@@ -233,7 +233,7 @@ function dataType_fun(dataType1, productId, pageNumber) {
                             $(".heisemo").append(
                                 '<div class="detail_1">' +
                                 '<div class="detail_1_top">' +
-                                '<div class="detail_1_top_left">' + item.title + '</div>' +
+                                '<div class="detail_1_top_left ">' + item.title + '</div>' +
                                 '<img src="../img/close.png" alt="" style="cursor: pointer">' +
                                 '</div>' +
                                 '<div class="list1">' +

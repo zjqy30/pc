@@ -1,3 +1,6 @@
+* { margin: 0; 
+	padding: 0; 
+}
 .left_bar{
     height: 100%;
 }
@@ -115,15 +118,18 @@
     margin-top: 23px;
 }
 .headline{
-    width:312px;
-    height:33px;
-    font-size:24px;
-    font-family:PingFangSC-Regular;
-    font-weight:400;
-    color:rgba(51,51,51,1);
-    line-height:33px;
+    width: 470px;
+    height: 33px;
+    font-size: 24px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+    line-height: 33px;
     margin-left: 30px;
     margin-top: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .more{
     width: 64px;

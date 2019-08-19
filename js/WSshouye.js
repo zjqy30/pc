@@ -31,23 +31,31 @@ $(document).ready(function () {
     $(".xiangxiazhankai").mouseenter(function () {
         $(".login_out").show();
     });
+    $(".login_out").mouseleave(function () {
+        $(".login_out").hide();
+    });
 
     var userType = window.localStorage.getItem("userType");
     //点击跳转页面
 
-    if (userType == '1') {
-        $(".shouye").click(function () {
-            window.localStorage.setItem("ifJumpIndex", "1");
-            window.location.href = "wshouye.html";
-        })
-    }
-    if (userType == '2') {
-        $(".shouye").click(function () {
-            window.localStorage.setItem("ifJumpIndex", "1");
-            window.location.href = "sshouye.html";
-        })
-    }
+    // if (userType == '1') {
+    //     $(".shouye").click(function () {
+    //         window.localStorage.setItem("ifJumpIndex", "1");
+    //         window.location.href = "wshouye.html";
+    //     })
+    // }
+    // if (userType == '2') {
+    //     $(".shouye").click(function () {
+    //         window.localStorage.setItem("ifJumpIndex", "1");
+    //         window.location.href = "sshouye.html";
+    //     })
+    // }
 
+     //点击首页跳转到官网
+    $(".shouye").click(function () {
+        window.localStorage.setItem("ifJumpIndex", "1");
+        window.location.href = 'https://www.hongonew.com';
+    })
 
     $(".dingdan").click(function () {
         if (userType == '1') {
