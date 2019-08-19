@@ -1,4 +1,4 @@
-/*登录*/
+﻿/*登录*/
 * { margin: 0; 
 	padding: 0; 
 }
@@ -45,10 +45,36 @@
 	padding: 10px 0;
 	text-align: center;
 	margin:auto auto;
-	display: block;
+	/* display: none; */
 }
 .pc_minicode_login img{
 	margin:20px auto 10px;
+}
+.refresh{
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	background-color:white;
+	opacity: 0.3;
+	margin:auto auto;
+}
+.refreshImg{
+	position: absolute;
+    z-index: 30;
+    top: 38%;
+    left: 41%;
+}
+.refresh_Div{
+	display: none;
+}
+.refresh_word{
+	position: absolute;
+    z-index: 30;
+    top: 54%;
+    left: 9%;
+    font-weight: 600;
+    background-color: white;
+    padding: 10px;
 }
 /*二维码*/
 #qrcode{

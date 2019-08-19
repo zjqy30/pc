@@ -24,6 +24,8 @@ window.onload = function () {
         $('.pc_login_pop').show();
         $('.zhezhao').show();
     } else {
+        $('.pc_login_pop').hide();
+        $('.zhezhao').hide();
         userInfo = window.localStorage.getItem('userData');
         var userInfoObj = JSON.parse(userInfo);
         console.log(userInfoObj);
@@ -33,6 +35,7 @@ window.onload = function () {
         } else if (userInfoObj.userType == '1') {
             if (window.localStorage.getItem('ifJumpIndex') == null) {
                 // 网红
+
                 window.location.href = 'pages/wdingdanzhongxin.html';
             } else {
                 window.localStorage.removeItem('ifJumpIndex');
@@ -41,6 +44,9 @@ window.onload = function () {
         } else if (userInfoObj.userType == '2') {
             // 商家
             if (window.localStorage.getItem('ifJumpIndex') == null) {
+
+                // $('.pc_login_pop').hide();
+                // $('.zhezhao').hide();
                 window.location.href = 'pages/sdingdanzhongxin.html';
             } else {
                 window.localStorage.removeItem('ifJumpIndex');
@@ -50,9 +56,6 @@ window.onload = function () {
 
 
     var phone_num = null;
-
-
-
 
     $('#getCode').click(function () {
         //手机验证码倒计时
@@ -160,8 +163,7 @@ window.onload = function () {
                             window.location.href = 'pages/sdingdanzhongxin.html';
                         }
 
-                        // $('.pc_login_pop').hide();
-                        // $('.zhezhao').hide();
+
 
                     } else if (data.errorCode == 1) {
                         alert("发送失败！")
@@ -172,6 +174,33 @@ window.onload = function () {
         })
     })
 
+    //点击刷新二维码
+    $(".refreshImg").click(function () {
+        $("#codeLogin").removeClass('refresh');
+        $(".refresh_Div").hide();
+        $("#qrcode").html('');
+        // 时间戳time
+        var timeStamp = getTimeStamp();
+        // console.log(timeStamp);
+
+        // 建立连接
+        setSocket(timeStamp);
+        // 根据时间戳实时获取二维码
+        getCode(timeStamp);
+        setTimeout(function () {
+            clearInterval(refreshCode);
+            $("#codeLogin").addClass('refresh');
+            $(".refresh_Div").show();
+        }, 300000)
+    })
+
+
+    //倒计时5分钟显示刷新二维码
+    var refreshCode = setInterval(function () {
+        $("#codeLogin").addClass('refresh');
+        $(".refresh_Div").show();
+    }, 300000)
+
     // 时间戳time
     var timeStamp = getTimeStamp();
     // console.log(timeStamp);
@@ -180,7 +209,7 @@ window.onload = function () {
     setSocket(timeStamp);
     // 根据时间戳实时获取二维码
     getCode(timeStamp);
-    // })
+
 
     // 获取时间戳
     function getTimeStamp() {

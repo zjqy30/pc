@@ -22,6 +22,7 @@
 			<div class="pc_login_pop">
 				<!-- 关闭登录按钮 -->
 				<div><img src="img/close.png" alt="" style="width: 15px; height:15px" class="loginOutBt"></div>
+				<div class="refresh_Div"><img src="img/refresh.png" alt="" class="refreshImg"><h2 class="refresh_word">二维码已失效，点击刷新</h2></div>
 				<!-- 手机号码登录 -->
 				<div class="pc_phone_login" id="phoneLogin">
 					<input class="pc_input" name="phone" placeholder="输入手机号码">
@@ -35,7 +36,8 @@
 				</div>
 				<!-- 小程序二维码登录 -->
 				<div class="pc_minicode_login" id="codeLogin">
-					<text>请使用红腕小程序扫一扫登录</text>
+					<text>请使用红腕小程序扫一扫登录</text><br>
+					<!-- <text class="code_countDown">哈哈</text> -->
 					<div id='qrcode'></div>
 					<div id="use_veriCode" class="pc_scan" style="cursor: pointer;text-align: center">使用手机验证码登录</div>
 				</div>
