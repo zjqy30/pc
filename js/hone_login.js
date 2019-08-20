@@ -3,7 +3,7 @@ window.onload = function () {
     // 根据手机号以及验证码校验做显隐
     $('.pc_red').hide();
 
-    console.log(returnCitySN);
+    // console.log(returnCitySN);
     var websocket = null;
     //测试
     // var addr = 'ws://192.168.0.166:8080/hone/web/websocket/';
@@ -18,20 +18,20 @@ window.onload = function () {
 
     // 如果window.localStorage中的userData有数据且token未过期，处登录状态
     // 如果window.localStorage中的userData无数据，需要登录
-    if (window.localStorage.getItem('userData') == null) {
+    if (window.localStorage.getItem('userData')==null) {
         // 无用户数据，登录
-        console.log('111');
+        // console.log('111');
         $('.pc_login_pop').show();
         $('.zhezhao').show();
     } else {
-        $('.pc_login_pop').hide();
-        $('.zhezhao').hide();
+        // $('.pc_login_pop').hide();
+        // $('.zhezhao').hide();
         userInfo = window.localStorage.getItem('userData');
         var userInfoObj = JSON.parse(userInfo);
-        console.log(userInfoObj);
+        // console.log(userInfoObj);
         if (userInfoObj.userType == '0') {
             // 普通
-            alert('请前往小程序进行身份认证！')
+            alert('请前往小程序进行身份认证！');
         } else if (userInfoObj.userType == '1') {
             if (window.localStorage.getItem('ifJumpIndex') == null) {
                 // 网红
@@ -64,7 +64,7 @@ window.onload = function () {
         time_countdown--;
         var countFun = setInterval(function () {
 
-            console.log(time_countdown);
+            // console.log(time_countdown);
             $("#getCode").text('(' + --time_countdown + ')s后重新发送');
         }, 1000)
         setTimeout(function () {
@@ -191,6 +191,7 @@ window.onload = function () {
             clearInterval(refreshCode);
             $("#codeLogin").addClass('refresh');
             $(".refresh_Div").show();
+            closeWebSocket();
         }, 300000)
     })
 
@@ -199,6 +200,7 @@ window.onload = function () {
     var refreshCode = setInterval(function () {
         $("#codeLogin").addClass('refresh');
         $(".refresh_Div").show();
+        closeWebSocket();
     }, 300000)
 
     // 时间戳time
@@ -248,7 +250,7 @@ window.onload = function () {
 
         //连接成功建立的回调方法
         websocket.onopen = function (event) {
-            console.log("连接成功");
+            // console.log("连接成功");
         };
 
         //接收到消息的回调方法
@@ -257,13 +259,13 @@ window.onload = function () {
 
             // console.error(JSON.stringify(event) + 'new');
             var str = event.data;
-            console.log(str + '这是返回的数据');
+            // console.log(str + '这是返回的数据');
 
             // 1001链接成功，1002扫码成功
             if (str.indexOf("1002") != -1) {
-                console.error(typeof str);
+                // console.error(typeof str);
                 var userInfoObj = JSON.parse(str);
-                console.log(userInfoObj);
+                // console.log(userInfoObj);
                 // 首页，保存用户的数据
                 window.localStorage.setItem('userData', str);
                 window.localStorage.setItem('token', userInfoObj.token);
@@ -272,7 +274,7 @@ window.onload = function () {
                 window.localStorage.setItem('headPic', userInfoObj.headPic);
                 window.localStorage.setItem('wxName', userInfoObj.wxName);
 
-                console.log(JSON.stringify(userInfoObj));
+                // console.log(JSON.stringify(userInfoObj));
                 if (userInfoObj.userType == '0') {
                     // 普通
 
@@ -321,7 +323,7 @@ window.onload = function () {
     //关闭连接
     function closeWebSocket() {
         websocket.close();
-        console.error('断开连接');
+        // console.error('断开连接');
     }
 
     //关闭登录页面

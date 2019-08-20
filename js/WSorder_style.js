@@ -117,7 +117,7 @@ function dataType_fun(dataType1, productId, pageNumber) {
         'productType': productId,
         'dateType': dataType1
     };
-    console.log("请求参数" + JSON.stringify(hall_list));
+    // console.log("请求参数" + JSON.stringify(hall_list));
     $.ajax({
         url: globel + '/hone/web/pureOffer/list',
         dataType: 'json',
@@ -127,11 +127,11 @@ function dataType_fun(dataType1, productId, pageNumber) {
         success: function (data) {
             var errorCode = data.errorCode;
             if (errorCode == 0) {
-                console.log('订单列表', data.data.pageData);
+                // console.log('订单列表', data.data.pageData);
                 list = data.data.pageData.list;
 
                 var totalCount = data.data.pageData.totalCount;
-                console.log(totalCount);
+                // console.log(totalCount);
 
 
                 if (totalCount == 0) {
@@ -167,12 +167,12 @@ function dataType_fun(dataType1, productId, pageNumber) {
 
                 $(".paging").append('<div class="page page_unselect" style="border: 1px solid transparent" ><input type="text" id="inputNumber" value=' + globelPageNumber + ' style="width:60%;height:90%"  ></input>');
                 $(".paging").append('<div class="page page_select page_select_word" onclick=inputPageNumberPageLimit(' + dataType1 + ',' + productId + ')>跳转</div>')
-                console.log("总页数=" + totalPage);
+                // console.log("总页数=" + totalPage);
                 $(".zhuti2").html('');
                 if (userType == '1') {
                     $.each(list, function (index, item) {
                         var offerId = item.id;
-                        console.log("offerId=" + offerId);
+                        // console.log("offerId=" + offerId);
                         //订单中心的内容开始 
                         $(".zhuti2").append(
                             '<div class="zhuti2_1_1">' +
@@ -321,7 +321,7 @@ if (userType == '1') {
         var index = indexOfferId.split("_")[0];
         var offerId = indexOfferId.split("_")[1];
         var item = list[index];
-        console.log(item)
+        // console.log(item)
 
         //点击出现订单详细内容                 
         //用户选择非纯佣弹出二维码
@@ -351,7 +351,7 @@ if (userType == '1') {
                 contentType: "application/json",
                 data: JSON.stringify(if_Snatch),
                 success: function (data) {
-                    console.log(data)
+                    // console.log(data)
                     var ifSnatch = data.data.ifSnatch;
                     var ifSend = '';
                     if (item.ifSend == 1) {
@@ -443,7 +443,7 @@ if (userType == '1') {
             contentType: "application/json",
             data: JSON.stringify(qingdan),
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 var errorCode = data.errorCode;
                 if (errorCode == 0) {
                     // alert("您已接单，请等待平台联系");
@@ -457,11 +457,11 @@ if (userType == '1') {
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 // 状态码
-                console.log(XMLHttpRequest.status);
+                // console.log(XMLHttpRequest.status);
                 // 状态
-                console.log(XMLHttpRequest.readyState);
+                // console.log(XMLHttpRequest.readyState);
                 // 错误信息   
-                console.log(textStatus);
+                // console.log(textStatus);
             }
         })
     }

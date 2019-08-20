@@ -20,7 +20,7 @@ if (window.localStorage.getItem('userData') != null) {
 
 //点击创建订单按钮
 $(".last_input1").click(function () {
-    console.log($(".adver").next().val());
+    // console.log($(".adver").next().val());
     //正则表达式的判断
     var salesBefore = $(".pro_sale").next().val();
     var fansNums = $(".daren_fans_demand").next().val();
@@ -58,7 +58,7 @@ $(".last_input1").click(function () {
             contentType: "application/json",
             data: JSON.stringify(order_content),
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 var errorCode = data.errorCode;
                 if (errorCode == 0) {
                     alert("订单创建成功");

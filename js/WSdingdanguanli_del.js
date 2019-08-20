@@ -92,13 +92,13 @@ function getList(pageNumber) {
         contentType: "application/json",
         data: JSON.stringify(manage_list),
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var errorCode = data.errorCode;
             if (errorCode == 0) {
-                console.log('商家纯佣订单列表', data.data.pageData.list);
+                // console.log('商家纯佣订单列表', data.data.pageData.list);
                 //总信息条数
                 var totalCount = data.data.pageData.totalCount;
-                console.log(totalCount);
+                // console.log(totalCount);
 
                 if (totalCount == 0) {
                     totalPage = 1;

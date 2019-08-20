@@ -1,6 +1,10 @@
 * { margin: 0; 
 	padding: 0; 
 }
+.heisemo{
+    /* height: 978px; */
+    height: 1020px !important;
+}
 .Content{
     height: 914px; 
 }
